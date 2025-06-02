@@ -1,0 +1,68 @@
+    - code:
+        system: 'http://hl7.org/fhir/tools/CodeSystem/ig-parameters'
+        code: test-data-factories
+      value: factories/factories.json
+    - code:
+        system: 'http://hl7.org/fhir/tools/CodeSystem/ig-parameters'
+        code: path-factory
+      value: input/factories
+
+factories-version: 1
+factories:
+    - {}
+
+
+{
+  "name" : "{factory-name}",
+  "type" : "liquid|profile",
+  "liquid" : "{template-file}",
+  "profile" : "{url}",
+  "data" : "{data-source}",
+  "mark-profile" : true|false,
+  "filename" : "{filename}",
+  "format" : "json|xml",
+  "bundle" : true|false,
+  "tables" : {
+    "name" : "{data-source}",
+  },
+  "filter" : "{fhirpath expression}",
+  "mappings" :
+      - 
+
+factories-version: 1
+factories:
+    -  name: PatientGenerator
+        details: 'Generate instances based on a profile in the IG using random data'
+        mode: profile
+        profile: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+        # data: factories/patient-cases.xlsx;Patients
+        mark-profile: true
+        format: json
+        filename: input/factories/Patient-$counter$.json
+        # bundle: false
+        # tables:
+        #     genders: factories/patient-genders.csv
+
+
+
+
+Instead a liquid fhirpath expresssion for each primitive element,  limit the fhirpath to the resource elment datatype.  For example, for Patient.identifier use
+{{Patient.identifier}} The only exception is for the .meta element
+
+
+Use this special syntax for accessing arrays - {[ expression ]}
+
+For example,
+
+{
+    "resourceType": "Patient",
+    "identifier": "{[Patient.identifier]}",
+
+
+
+Prompt Template:
+
+Create a JSON template for the FHIR 6.0.0-ballot3 [ResourceName] resource based on https://hl7.org/fhir/6.0.0-ballot3/[resourcename].html. For the values, insert FHIRPath expressions that correspond to the equivalent elements in the FHIR 4.0.1 [ResourceName] resource at https://hl7.org/fhir/4.0.1/[resourcename].html. Use FHIRPath expressions at the resource element datatype level (e.g., [ResourceName].identifier instead of [ResourceName].identifier.use), except for the meta element, which should use granular FHIRPath expressions (e.g., [ResourceName].meta.versionId). Embed FHIRPath expressions in Liquid-like tags, using {{ expression }} for non-array elements and {[ expression ]} for array elements (e.g., {[ [ResourceName].identifier ]} for arrays like identifier). Wrap the JSON template in an <xaiArtifact> tag with a unique artifact_id, a descriptive title, and contentType="application/json". If an element is new in 6.0.0-ballot3 or has no direct equivalent in 4.0.1, note this in the template or omit if optional.
+}
+
+allergyintolerance.reaction is BackboneElement type.  This type should be expanded to its subcomponents - .substance, .manifestation, .description, etc

@@ -1,0 +1,253 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.us.healthedata1-r6-sandbox",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
+  "url": "http://www.fhir.org/guides/healthedata1-r6-sandbox/ImplementationGuide/hl7.fhir.us.healthedata1-r6-sandbox",
+  "version": "0.1.0",
+  "name": "HealthEData1_R6Sandbox",
+  "title": "Health eData1 R6 Sandbox",
+  "status": "active",
+  "publisher": "HL7 International / Cross-Group Projects",
+  "contact": [
+    {
+      "name": "HL7 International / Cross-Group Projects",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cgp"
+        },
+        {
+          "system": "email",
+          "value": "cgp@lists.HL7.org"
+        }
+      ]
+    },
+    {
+      "name": "Health eData Inc",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:ehaas@healthedatainc.com"
+        }
+      ]
+    },
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:ehaas@healthedatainc.com"
+        }
+      ]
+    }
+  ],
+  "description": "This is a **Healthedata1** sandbox for creation of R6 resources and examples",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "US",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "copyright": "Used by permission of HL7 International, all rights reserved Creative Commons License",
+  "packageId": "hl7.fhir.us.healthedata1-r6-sandbox",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "6.0.0-ballot3"
+  ],
+  "definition": {
+    "grouping": [
+      {
+        "id": "TestExamples",
+        "name": "Test Examples",
+        "description": "Examples for Testing Stuff Out!!!"
+      }
+    ],
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-patient"
+        },
+        "description": "The US Core Patient Profile inherits from the FHIR [Patient](https://hl7.org/fhir/R4/patient.html) resource; refer to it for scope and usage definitions. This profile meets the requirements of the [U.S. Core Data for Interoperability (USCDI)](https://www.healthit.gov/isp/united-states-core-data-interoperability-uscdi) *Patient Demographics/Information* Data Class. It sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It specifies which core elements, extensions, vocabularies, and value sets **SHALL** be present and constrains how the elements are used. Providing the floor for standards development for specific use cases promotes interoperability and adoption.",
+        "name": "US Core Patient Profile",
+        "isExample": false
+      }
+    ],
+    "page": {
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "title": "Home",
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "draft"
+            }
+          ],
+          "name": "index.html",
+          "sourceUrl": "index.html"
+        },
+        {
+          "title": "Guidance",
+          "generation": "markdown",
+          "name": "guidance.html",
+          "sourceUrl": "guidance.html"
+        },
+        {
+          "title": "Downloads",
+          "generation": "markdown",
+          "name": "downloads.html",
+          "sourceUrl": "downloads.html"
+        },
+        {
+          "title": "ImplementationGuide Resource",
+          "generation": "markdown",
+          "name": "ImplementationGuide.html",
+          "sourceUrl": "ImplementationGuide.html"
+        },
+        {
+          "title": "Change Log",
+          "generation": "markdown",
+          "name": "changes.html",
+          "sourceUrl": "changes.html"
+        }
+      ],
+      "name": "toc.html",
+      "sourceUrl": "toc.html"
+    },
+    "parameter": [
+      {
+        "code": {
+          "code": "copyrightyear",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "2020+"
+      },
+      {
+        "code": {
+          "code": "releaselabel",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "CI Build"
+      },
+      {
+        "code": {
+          "code": "test-data-factories",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "factories/factories.json"
+      },
+      {
+        "code": {
+          "code": "path-factory",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "input/factories"
+      },
+      {
+        "code": {
+          "code": "path-expansion-params",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "../../input/_resources/exp-params.json"
+      },
+      {
+        "code": {
+          "code": "show-inherited-invariants",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "usage-stats-opt-out",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "false"
+      },
+      {
+        "code": {
+          "code": "path-output",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "output"
+      },
+      {
+        "code": {
+          "code": "path-resource",
+          "system": "http://hl7.org/fhir/guide-parameter-code"
+        },
+        "value": "input/resources"
+      },
+      {
+        "code": {
+          "code": "path-resource",
+          "system": "http://hl7.org/fhir/guide-parameter-code"
+        },
+        "value": "fsh-generated/resources"
+      },
+      {
+        "code": {
+          "code": "path-resource",
+          "system": "http://hl7.org/fhir/guide-parameter-code"
+        },
+        "value": "input/intro-notes"
+      },
+      {
+        "code": {
+          "code": "path-liquid",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "input/images/liquid"
+      },
+      {
+        "code": {
+          "code": "excludexml",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "excludejson",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "false"
+      },
+      {
+        "code": {
+          "code": "excludettl",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "excludemap",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "propagate-status",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      }
+    ]
+  }
+}

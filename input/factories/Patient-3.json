@@ -1,0 +1,141 @@
+{
+  "resourceType" : "Patient",
+  "id" : "8e48d3de-3e5c-40fe-a129-f0157d3dcd38",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"]
+  },
+  "identifier" : [{
+    "use" : "official",
+    "system" : "http://hl7.org/fhir/sid/us-ssn",
+    "value" : "000006506"
+  }],
+  "active" : true,
+  "name" : [{
+    "use" : "old",
+    "text" : "Responsibility for Adverse Medical Event Reporting",
+    "family" : "When the artifact assessment was approved by publisher",
+    "given" : ["Request or event that necessitated this assessment"],
+    "prefix" : ["Codes to identify types of input parameters.  These will typically be specific to a particular workflow.  E.g. \"Identified issues\", \"Preliminary results\", \"Filler order\", \"Final results\", etc."],
+    "suffix" : ["DESCRIPTION"],
+    "period" : {
+      "start" : "2020-12-31T23:50:50-05:00",
+      "end" : "2020-12-31T23:50:50-05:00"
+    }
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "02-222-2222",
+    "use" : "home"
+  }],
+  "gender" : "other",
+  "birthDate" : "1963-10-26",
+  "deceasedBoolean" : true,
+  "address" : [{
+    "use" : "home",
+    "type" : "both",
+    "text" : "534 Erewhon St PeasantVille, Rainbow, Vic  3999",
+    "line" : ["534 Erewhon St"],
+    "city" : "PleasantVille",
+    "district" : "Rainbow",
+    "state" : "Vic",
+    "postalCode" : "3999"
+  }],
+  "maritalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code" : "M"
+    }]
+  },
+  "multipleBirthBoolean" : false,
+  "photo" : [{
+    "url" : "https://images.unsplash.com/photo-1552053831-71594a27632d"
+  }],
+  "contact" : [{
+    "relationship" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "code" : "MGRFTH"
+      }]
+    }],
+    "role" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0131",
+        "code" : "O"
+      }]
+    }],
+    "name" : {
+      "use" : "nickname",
+      "text" : "Citation for FEvIR Evidence 7637: Critically appraised summary of primary outcome of multi-platform RCT of anticoagulation for non-critically ill COVID-19",
+      "family" : "The definition of a plan for a series of actions, independent of any specific patient or context",
+      "given" : ["Experimental Procedure Indicator"],
+      "prefix" : ["How the subject was exposed to the substance"],
+      "suffix" : ["ImagingStudy.series.instance.type"],
+      "period" : {
+        "start" : "2022-07-31",
+        "end" : "2024-07-31"
+      }
+    },
+    "additionalName" : [{
+      "use" : "old",
+      "text" : "The entity (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.",
+      "family" : "DocumentEntry status",
+      "given" : ["Encounter:account"],
+      "prefix" : ["Message to put in log if source exists (FHIRPath)"],
+      "suffix" : ["The population from the Measure that corresponds to this population in the MeasureReport resource."],
+      "period" : {
+        "start" : "2025-02-10T09:36:36-05:00",
+        "end" : "2025-02-10T09:36:36-05:00"
+      }
+    }],
+    "telecom" : [{
+      "system" : "sms",
+      "value" : "+3581234567"
+    }],
+    "address" : {
+      "use" : "home",
+      "type" : "both",
+      "line" : ["534 Erewhon St"],
+      "city" : "PleasantVille",
+      "district" : "Rainbow",
+      "state" : "Vic",
+      "postalCode" : "3999"
+    },
+    "additionalAddress" : [{
+      "use" : "work",
+      "line" : ["123 Smart St"],
+      "city" : "PleasantVille",
+      "state" : "Vic",
+      "postalCode" : "3999"
+    }],
+    "gender" : "unknown",
+    "organization" : {
+      "reference" : "Organization/7dad757a-8fac-4690-bc04-5cf8433c2635"
+    },
+    "period" : {
+      "start" : "2020-01-01",
+      "end" : "2021-12-31"
+    }
+  }],
+  "communication" : [{
+    "language" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/specialty-rx/CodeSystem/specialty-rx-event-type",
+        "code" : "query"
+      }],
+      "text" : "NutritionOrder.identifier"
+    },
+    "preferred" : true
+  }],
+  "generalPractitioner" : [{
+    "reference" : "Practitioner/f9bad385-0813-4261-ab69-4057d1aa01c6"
+  }],
+  "managingOrganization" : {
+    "reference" : "Organization/87b376d8-b117-4ad9-b716-672750cbb9a5"
+  },
+  "link" : [{
+    "other" : {
+      "reference" : "RelatedPerson/63698645-f5ab-4226-8d47-81256c5fe2fa"
+    },
+    "type" : "seealso"
+  }]
+}

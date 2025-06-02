@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="cgp" url="http://www.fhir.org/guides/healthedata1-r6-sandbox">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="Patient/0e496a5f-59eb-489d-83df-b21a1aa66e96" key="Patient-0e496a5f-59eb-489d-83df-b21a1aa66e96" name=""/>
+<artifact id="Patient/6ea07d09-0b4e-473f-a465-aec999ed8ed0" key="Patient-6ea07d09-0b4e-473f-a465-aec999ed8ed0" name=""/>
+<artifact id="Patient/8e48d3de-3e5c-40fe-a129-f0157d3dcd38" key="Patient-8e48d3de-3e5c-40fe-a129-f0157d3dcd38" name=""/>
+<artifact id="Patient/8f74896a-7f23-4de3-b453-347d04514440" key="Patient-8f74896a-7f23-4de3-b453-347d04514440" name=""/>
+<artifact id="StructureDefinition/us-core-patient" key="StructureDefinition-us-core-patient" name="US Core Patient Profile"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="changes" name="Change Log"/>
+<page key="downloads" name="Downloads"/>
+<page key="guidance" name="Guidance"/>
+<page key="index" name="Home"/>
+<page key="ImplementationGuide" name="ImplementationGuide Resource"/>
+<page key="toc" name="Table of Contents"/>
+</specification>

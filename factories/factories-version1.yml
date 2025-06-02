@@ -1,0 +1,13 @@
+factories-version: 1
+factories:
+    - name: PatientGenerator
+      details: "Generate instances based on a profile in the IG using random data"
+      mode: profile
+      profile: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+      data: factories/patient-cases.csv;Patients
+      mark-profile: true
+      format: json
+      filename: input/factories/Patient-$counter$.json
+      # bundle: false
+      # tables:
+      #     genders: factories/patient-genders.csv
