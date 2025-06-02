@@ -1,0 +1,7 @@
+Source File	Size	loadResources	load	generateSnapshots	load-configure	scan	loadDepInfo	loadInfo	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-hl7.fhir.us.healthedata1-r6-sandbox.json	7352	-	0	0	0	0	0	0	3	84	0	0	0	0	0	0	0	1	0	0	45	45	0	0	0	2	0	1
+input/resources/StructureDefinition-us-core-patient.json	16967	18	0	542	0	0	0	0	0	349	0	0	1	2807	0	0	0	2	0	0	279	4737	0	0	0	14	0	1
+input/factories/Patient-1.json	5581	5	0	0	1	0	0	0	1	351	0	0	0	0	0	0	0	0	0	0	18	29	0	0	0	0	0	0
+input/factories/Patient-2.json	47973	4	0	0	0	0	0	0	1	13	0	0	0	0	0	0	0	0	0	0	94	40	0	0	0	0	0	0
+input/factories/Patient-3.json	5675	3	0	0	0	0	0	0	1	8	0	0	0	0	0	0	0	0	0	0	16	17	0	0	0	0	0	0
+input/factories/Patient-4.json	5330	4	0	0	0	0	0	0	0	7	0	0	0	0	0	0	0	0	0	0	18	15	0	0	0	0	0	0

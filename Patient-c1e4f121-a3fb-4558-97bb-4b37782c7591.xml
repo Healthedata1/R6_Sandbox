@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="c1e4f121-a3fb-4558-97bb-4b37782c7591"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient c1e4f121-a3fb-4558-97bb-4b37782c7591</b></p><a name="c1e4f121-a3fb-4558-97bb-4b37782c7591"> </a><a name="hcc1e4f121-a3fb-4558-97bb-4b37782c7591"> </a><a name="c1e4f121-a3fb-4558-97bb-4b37782c7591-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-patient.html">US Core Patient Profileversion: null0.1.0)</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Gravida 2 – 5 (tidak termasuk pseudoprimigravida) Unknown, DoB: 1963-10-28 ( https://fhir.ee/sid/pid/est/npi#60712121111)</p><hr/><table role="presentation" class="none"><tr><td><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td>true</td><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td>1977-04-11 08:42:36-0500</td></tr><tr><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus L}">Legally Separated</span></td><td style="background-color: #f3f5da" title="Known multipleBirth status of Patient">Multiple Birth:</td><td colspan="3">3</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 06-87654321</li><li>123 Main St Santa Rosa CA 95555 US </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Language spoken">Language:</td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical relapse}">bMlJkAt0V92RYhhG3fNt2</span> (preferred)</td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: stepdaughter">stepdaughter:</td><td colspan="3"><ul><li>ActivityDefinition.purpose(Temp) (Unknown)</li><li>ALAM SARI KAJANG 43000 MYS </li><li><a href="mailto:michaliskyriakou@gmail.com">michaliskyriakou@gmail.com</a></li><li>Organization:<a href="Organization/338cdb7e-edea-4903-b5ea-01187185a071">Organization/338cdb7e-edea-4903-b5ea-01187185a071</a></li><li>Valid Period:2012 --&gt; (ongoing)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="Practitioner/da470866-b643-43a4-b00f-3f9c9fde957c">Practitioner/da470866-b643-43a4-b00f-3f9c9fde957c</a></li><li>Managing Organization: <a href="Organization/1da049cc-0e2a-43de-b407-7ad2dea0bb4c">Organization/1da049cc-0e2a-43de-b407-7ad2dea0bb4c</a></li><li>This record replaced by: <a href="Patient/d0a0db0f-796b-4f6e-8e69-4a76f27f2072">Patient/d0a0db0f-796b-4f6e-8e69-4a76f27f2072</a></li></ul></td></tr></table></td><td><img src="30b7b862-93c8-47cf-8ce3-a7fcced977d5.gif" alt="Patient Photo"/></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="https://fhir.ee/sid/pid/est/npi"/>
+    <value value="60712121111"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="usual"/>
+    <text value="Gravida 2 – 5 (tidak termasuk pseudoprimigravida)"/>
+    <family value="Der Export wurde über die Betriebsstätte mit der BSNR 1234556676 eingeschränkt"/>
+    <given value="CohortDefinition: Heart failure based on Phenotypes"/>
+    <prefix value="A contact detail for the person, e.g. a telephone number or an email address. Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification."/>
+    <suffix value="AuditEvent.participant.userId"/>
+    <period>
+      <start value="2020-03-15"/>
+      <end value="2020-03-15"/>
+    </period>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="06-87654321"/>
+  </telecom>
+  <gender value="unknown"/>
+  <birthDate value="1963-10-28"/>
+  <deceasedDateTime value="1977-04-11T08:42:36-05:00"/>
+  <address>
+    <line value="123 Main St"/>
+    <city value="Santa Rosa"/>
+    <state value="CA"/>
+    <postalCode value="95555"/>
+    <country value="US"/>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="L"/>
+    </coding>
+  </maritalStatus>
+  <multipleBirthInteger value="3"/>
+  <photo>
+    <contentType value="image/gif"/>
+    <data value="R0lGODlhEwARAPcAAAAAAAAA/+9aAO+1AP/WAP/eAP/eCP/eEP/eGP/nAP/nCP/nEP/nIf/nKf/nUv/nWv/vAP/vCP/vEP/vGP/vIf/vKf/vMf/vOf/vWv/vY//va//vjP/3c//3lP/3nP//tf//vf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAAEALAAAAAATABEAAAi+AAMIDDCgYMGBCBMSvMCQ4QCFCQcwDBGCA4cLDyEGECDxAoAQHjxwyKhQAMeGIUOSJJjRpIAGDS5wCDly4AALFlYOgHlBwwOSNydM0AmzwYGjBi8IHWoTgQYORg8QIGDAwAKhESI8HIDgwQaRDI1WXXAhK9MBBzZ8/XDxQoUFZC9IiCBh6wEHGz6IbNuwQoSpWxEgyLCXL8O/gAnylNlW6AUEBRIL7Og3KwQIiCXb9HsZQoIEUzUjNEiaNMKAAAA7"/>
+  </photo>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="STPDAU"/>
+      </coding>
+    </relationship>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="POWATT"/>
+      </coding>
+    </role>
+    <name>
+      <use value="temp"/>
+      <text value="ActivityDefinition.purpose"/>
+      <family value="Query for personal trainers near Mrs. Johansson"/>
+      <given value="Bayi kelihatan sihat"/>
+      <prefix value="Bundle.entry.resource.ofType(Provenance).where(activity.coding.code = 'forward-message').exists()"/>
+      <suffix value="Hôpital du gouvernement"/>
+      <period>
+        <start value="2026-07-27T23:36:36+10:00"/>
+        <end value="2026-07-27T23:36:36+10:00"/>
+      </period>
+    </name>
+    <additionalName>
+      <use value="maiden"/>
+      <text value="Comprehension deficit"/>
+      <family value=".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=EVN or DEF]"/>
+      <given value="Information about the primary source(s) involved in validation."/>
+      <prefix value="CompartmentDefinition.resource.param"/>
+      <suffix value="Condition response for Fit 4 Life"/>
+      <period>
+        <start value="2027-01-01T00:36:36+10:00"/>
+        <end value="2027-01-05T00:36:36+10:00"/>
+      </period>
+    </additionalName>
+    <telecom>
+      <system value="email"/>
+      <value value="michaliskyriakou@gmail.com"/>
+      <use value="home"/>
+    </telecom>
+    <address>
+      <line value="ALAM SARI"/>
+      <city value="KAJANG"/>
+      <postalCode value="43000"/>
+      <country value="MYS"/>
+    </address>
+    <additionalAddress>
+      <use value="work"/>
+      <line value="123 Smart St"/>
+      <city value="PleasantVille"/>
+      <state value="Vic"/>
+      <postalCode value="3999"/>
+    </additionalAddress>
+    <gender value="unknown"/>
+    <organization>
+      <reference value="Organization/338cdb7e-edea-4903-b5ea-01187185a071"/>
+    </organization>
+    <period>
+      <start value="2012"/>
+    </period>
+  </contact>
+  <communication>
+    <language>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+        <code value="relapse"/>
+      </coding>
+      <text value="bMlJkAt0V92RYhhG3fNt2"/>
+    </language>
+    <preferred value="true"/>
+  </communication>
+  <generalPractitioner>
+    <reference value="Practitioner/da470866-b643-43a4-b00f-3f9c9fde957c"/>
+  </generalPractitioner>
+  <managingOrganization>
+    <reference value="Organization/1da049cc-0e2a-43de-b407-7ad2dea0bb4c"/>
+  </managingOrganization>
+  <link>
+    <other>
+      <reference value="Patient/d0a0db0f-796b-4f6e-8e69-4a76f27f2072"/>
+    </other>
+    <type value="replaced-by"/>
+  </link>
+</Patient>

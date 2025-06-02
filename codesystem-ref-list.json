@@ -1,0 +1,63 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/administrative-gender",
+      "version" : "6.0.0-ballot3",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "oids" : ["2.16.840.1.113883.4.642.4.2"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-administrative-gender.html" : "AdministrativeGender"
+    },
+    {
+      "url" : "http://hl7.org/fhir/contact-point-system",
+      "version" : "6.0.0-ballot3",
+      "status" : "active",
+      "name" : "ContactPointSystem",
+      "title" : "ContactPointSystem",
+      "description" : "Telecommunications form for contact point.",
+      "oids" : ["2.16.840.1.113883.4.642.1.72"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-contact-point-system.html" : "ContactPointSystem"
+    },
+    {
+      "url" : "http://hl7.org/fhir/contact-point-use",
+      "version" : "6.0.0-ballot3",
+      "status" : "active",
+      "name" : "ContactPointUse",
+      "title" : "ContactPointUse",
+      "description" : "Use of contact point.",
+      "oids" : ["2.16.840.1.113883.4.642.1.74"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-contact-point-use.html" : "ContactPointUse"
+    },
+    {
+      "url" : "https://www.usps.com/",
+      "version" : "1.0.0",
+      "status" : "active",
+      "name" : "USPSStateCodes",
+      "title" : "USPS State Codes",
+      "description" : "State Codes as defined by US Postal Service\r\n\r\nFor more information, see [https://pe.usps.com/text/pub28/28apb.htm](https://pe.usps.com/text/pub28/28apb.htm)",
+      "uses" : {
+      },
+      "http://hl7.org/fhir/us/core/2025Jan/ValueSet-us-core-usps-state.html" : "USPS Two Letter Alphabetic Codes"
+    },
+    {
+      "url" : "urn:ietf:bcp:47",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "Ietf3066",
+      "title" : "Tags for the Identification of Languages",
+      "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
+      "oids" : ["2.16.840.1.113883.6.121"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/us/core/2025Jan/ValueSet-simple-language.html" : "Language codes with language and optionally a region modifier"
+    }
+  ]
+}

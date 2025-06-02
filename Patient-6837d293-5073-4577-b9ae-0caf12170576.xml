@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="6837d293-5073-4577-b9ae-0caf12170576"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient 6837d293-5073-4577-b9ae-0caf12170576</b></p><a name="6837d293-5073-4577-b9ae-0caf12170576"> </a><a name="hc6837d293-5073-4577-b9ae-0caf12170576"> </a><a name="6837d293-5073-4577-b9ae-0caf12170576-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-patient.html">US Core Patient Profileversion: null0.1.0)</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">CommunicationRequestStatus(temp) Unknown, DoB: 2004-04-08 ( urn:oid:2.16.840.1.113883.4.3.2#Alaska Driver's License#1234567 (use: usual, ))</p><hr/><table role="presentation" class="none"><tr><td><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td>false</td><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td>true</td></tr><tr><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus D}">Divorced</span></td><td style="background-color: #f3f5da" title="Known multipleBirth status of Patient">Multiple Birth:</td><td colspan="3">false</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="mailto:Birgit.Blum@example.ch">Birgit.Blum@example.ch</a></li><li>183 MOUNTAIN VIEW ST MOUNDS OK 74048 US </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Language spoken">Language:</td><td colspan="3"><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode SIB}">Suïcidaliteit</span></td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: stepdaughter">stepdaughter:</td><td colspan="3"><ul><li>RiskAssessment.prediction(Anonymous) (Female)</li><li>TAPAK 1200-20C JALAN ILYAS KAMPUNG TENGAH KAJANG 43000 MYS </li><li><a href="mailto:xxx_helleman@hotmail.com">xxx_helleman@hotmail.com</a></li><li>Organization:<a href="Organization/4d4cd04e-bd42-4b4e-b645-bb0cb33712dd">Organization/4d4cd04e-bd42-4b4e-b645-bb0cb33712dd</a></li><li>Valid Period:2020-01-01 --&gt; 2021-12-31</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="Organization/c510d220-b541-4844-b7bc-b0a3e9668d52">Organization/c510d220-b541-4844-b7bc-b0a3e9668d52</a></li><li>Managing Organization: <a href="Organization/38f1347b-60a2-4818-9059-b88699f329ca">Organization/38f1347b-60a2-4818-9059-b88699f329ca</a></li><li>This record replaced by: <a href="RelatedPerson/d98a9d84-e0b0-47a9-9c79-d77a4c3a39f2">RelatedPerson/d98a9d84-e0b0-47a9-9c79-d77a4c3a39f2</a></li></ul></td></tr></table></td><td><img src="b0133399-8336-4378-82d5-87f7eb98fce2.gif" alt="Patient Photo"/></td></tr></table></div>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <system value="urn:oid:2.16.840.1.113883.4.3.2"/>
+    <value value="1234567"/>
+  </identifier>
+  <active value="false"/>
+  <name>
+    <use value="temp"/>
+    <text value="CommunicationRequestStatus"/>
+    <family value="Distance from Closest Margin"/>
+    <given value="Some text for the end user about the usage/meaning of this image"/>
+    <prefix value="Additional materials, documents, etc."/>
+    <suffix value="ConsentAction"/>
+    <period>
+      <start value="2016-02-21T16:00:00+01:00"/>
+    </period>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="Birgit.Blum@example.ch"/>
+  </telecom>
+  <gender value="unknown"/>
+  <birthDate value="2004-04-08"/>
+  <deceasedBoolean value="true"/>
+  <address>
+    <line value="183 MOUNTAIN VIEW ST"/>
+    <city value="MOUNDS"/>
+    <state value="OK"/>
+    <postalCode value="74048"/>
+    <country value="US"/>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="D"/>
+    </coding>
+  </maritalStatus>
+  <multipleBirthBoolean value="false"/>
+  <photo>
+    <contentType value="image/gif"/>
+    <data value="R0lGODlhEwARAPcAAAAAAAAA/+9aAO+1AP/WAP/eAP/eCP/eEP/eGP/nAP/nCP/nEP/nIf/nKf/nUv/nWv/vAP/vCP/vEP/vGP/vIf/vKf/vMf/vOf/vWv/vY//va//vjP/3c//3lP/3nP//tf//vf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAAEALAAAAAATABEAAAi+AAMIDDCgYMGBCBMSvMCQ4QCFCQcwDBGCA4cLDyEGECDxAoAQHjxwyKhQAMeGIUOSJJjRpIAGDS5wCDly4AALFlYOgHlBwwOSNydM0AmzwYGjBi8IHWoTgQYORg8QIGDAwAKhESI8HIDgwQaRDI1WXXAhK9MBBzZ8/XDxQoUFZC9IiCBh6wEHGz6IbNuwQoSpWxEgyLCXL8O/gAnylNlW6AUEBRIL7Og3KwQIiCXb9HsZQoIEUzUjNEiaNMKAAAA7"/>
+  </photo>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="STPDAU"/>
+      </coding>
+    </relationship>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+        <code value="O"/>
+      </coding>
+    </role>
+    <name>
+      <use value="anonymous"/>
+      <text value="RiskAssessment.prediction"/>
+      <family value="List of participants involved in the appointment."/>
+      <given value="* * Zijn uw darmklachten de afgelopen twee weken verslechterd, verbeterd of niet veranderd?"/>
+      <prefix value="StructureMap.group.rule.dependent.name"/>
+      <suffix value="Serum kolesterol: TG"/>
+      <period>
+        <start value="2020-06-01T23:36:36+10:00"/>
+        <end value="2020-06-01T23:36:36+10:00"/>
+      </period>
+    </name>
+    <additionalName>
+      <use value="maiden"/>
+      <text value="searchParam"/>
+      <family value="The start of this cytoband Interval."/>
+      <given value="Jeg bliver mobbet eller drillet af andre børn eller unge"/>
+      <prefix value="This procedure contributed to the cause of death of the related person. If contributedToDeath is not populated, then it is unknown."/>
+      <suffix value="Header-level adjudication"/>
+      <period>
+        <start value="2020-02-18T00:36:36+10:00"/>
+        <end value="2020-02-18T00:36:36+10:00"/>
+      </period>
+    </additionalName>
+    <telecom>
+      <system value="email"/>
+      <value value="xxx_helleman@hotmail.com"/>
+    </telecom>
+    <address>
+      <line value="TAPAK 1200-20C JALAN ILYAS KAMPUNG TENGAH"/>
+      <city value="KAJANG"/>
+      <postalCode value="43000"/>
+      <country value="MYS"/>
+    </address>
+    <additionalAddress>
+      <use value="work"/>
+      <line value="123 Smart St"/>
+      <city value="PleasantVille"/>
+      <state value="Vic"/>
+      <postalCode value="3999"/>
+    </additionalAddress>
+    <gender value="female"/>
+    <organization>
+      <reference value="Organization/4d4cd04e-bd42-4b4e-b645-bb0cb33712dd"/>
+    </organization>
+    <period>
+      <start value="2020-01-01"/>
+      <end value="2021-12-31"/>
+    </period>
+  </contact>
+  <communication>
+    <language>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="SIB"/>
+      </coding>
+      <text value="Suïcidaliteit"/>
+    </language>
+    <preferred value="false"/>
+  </communication>
+  <generalPractitioner>
+    <reference value="Organization/c510d220-b541-4844-b7bc-b0a3e9668d52"/>
+  </generalPractitioner>
+  <managingOrganization>
+    <reference value="Organization/38f1347b-60a2-4818-9059-b88699f329ca"/>
+  </managingOrganization>
+  <link>
+    <other>
+      <reference value="RelatedPerson/d98a9d84-e0b0-47a9-9c79-d77a4c3a39f2"/>
+    </other>
+    <type value="replaced-by"/>
+  </link>
+</Patient>

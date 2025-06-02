@@ -1,0 +1,16 @@
+[
+  {
+    "id" : "us-core-patient",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+    "version" : "0.1.0",
+    "name" : "USCorePatientProfile"
+  },
+  {
+    "id" : "hl7.fhir.us.healthedata1-r6-sandbox",
+    "type" : "ImplementationGuide",
+    "url" : "http://www.fhir.org/guides/healthedata1-r6-sandbox/ImplementationGuide/hl7.fhir.us.healthedata1-r6-sandbox",
+    "version" : "0.1.0",
+    "name" : "HealthEData1_R6Sandbox"
+  }
+]

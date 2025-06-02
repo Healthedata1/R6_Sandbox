@@ -1,0 +1,6 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://hl7.org/fhir/administrative-gender,6.0.0-ballot3,active,"2.16.840.1.113883.4.642.4.2",AdministrativeGender,AdministrativeGender,"The gender of a person used for administrative purposes.","ValueSet/administrative-gender"
+http://hl7.org/fhir/contact-point-system,6.0.0-ballot3,active,"2.16.840.1.113883.4.642.1.72",ContactPointSystem,ContactPointSystem,"Telecommunications form for contact point.","ValueSet/contact-point-system"
+http://hl7.org/fhir/contact-point-use,6.0.0-ballot3,active,"2.16.840.1.113883.4.642.1.74",ContactPointUse,ContactPointUse,"Use of contact point.","ValueSet/contact-point-use"
+https://www.usps.com/,1.0.0,active,,USPSStateCodes,USPS State Codes,"State Codes as defined by US Postal Service    For more information, see [https://pe.usps.com/text/pub28/28apb.htm](https://pe.usps.com/text/pub28/28apb.htm)","ValueSet/us-core-usps-state"
+urn:ietf:bcp:47,2.0.1,active,"2.16.840.1.113883.6.121",Ietf3066,Tags for the Identification of Languages,"Older value from OID registry.  Superceded; see recommendations in BCP-47.","ValueSet/simple-language"

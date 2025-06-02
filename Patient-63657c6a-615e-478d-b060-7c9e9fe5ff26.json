@@ -1,0 +1,139 @@
+{
+  "resourceType" : "Patient",
+  "id" : "63657c6a-615e-478d-b060-7c9e9fe5ff26",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient 63657c6a-615e-478d-b060-7c9e9fe5ff26</b></p><a name=\"63657c6a-615e-478d-b060-7c9e9fe5ff26\"> </a><a name=\"hc63657c6a-615e-478d-b060-7c9e9fe5ff26\"> </a><a name=\"63657c6a-615e-478d-b060-7c9e9fe5ff26-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-patient.html\">US Core Patient Profileversion: null0.1.0)</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Codes identifying groupings of parameters; e.g. Cardiovascular.(maiden) Unknown, DoB: 2010-10-08 ( 123456)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>false</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td>true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus S}\">Never Married</span></td><td style=\"background-color: #f3f5da\" title=\"Known multipleBirth status of Patient\">Multiple Birth:</td><td colspan=\"3\">false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"tel:+5581992570831\">+5581992570831</a></li><li>48 Astoria Drive Coventry CV4 9ZY </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Language spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes:{http://fhir.hie.moh.gov.my/CodeSystem/questionnaire-my-core 03}\">A legal or geographic region in which the questionnaire is intended to be used. It may be possible for the questionnaire to be used in jurisdictions other than those for which it was originally designed or intended.\n\nDEPRECATION NOTE: For consistency, implementations are encouraged to migrate to using the new 'jurisdiction' code in the useContext element.  (I.e. useContext.code indicating http://terminology.hl7.org/CodeSystem/usage-context-type#jurisdiction and useContext.valueCodeableConcept indicating the jurisdiction.)</span> (preferred)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: natural sister\">natural sister:</td><td colspan=\"3\"><ul><li>Please provide the stop date of radiotherapy (Unknown)</li><li>台北市北投區明德路365號(home)</li><li>ph: 999-999-9999(Home)</li><li>Organization:<a href=\"Organization/3918a343-8d0f-4000-86ef-1aecf3c48731\">Organization/3918a343-8d0f-4000-86ef-1aecf3c48731</a></li><li>Valid Period:2020-01-01 --&gt; 2021-12-31</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>General Practitioner: <a href=\"Organization/ca123804-cd68-4c4c-abbb-089c3a371e0f\">Organization/ca123804-cd68-4c4c-abbb-089c3a371e0f</a></li><li>Managing Organization: <a href=\"Organization/8d761b1c-9c9c-444d-924e-bb520e2b6f14\">Organization/8d761b1c-9c9c-444d-924e-bb520e2b6f14</a></li><li>Please refer to: <a href=\"RelatedPerson/41bed546-4eae-40be-98a0-58b44a6e0de5\">RelatedPerson/41bed546-4eae-40be-98a0-58b44a6e0de5</a></li></ul></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "value" : "123456"
+  }],
+  "active" : false,
+  "name" : [{
+    "use" : "maiden",
+    "text" : "Codes identifying groupings of parameters; e.g. Cardiovascular.",
+    "family" : "General",
+    "given" : ["When the assessment was documented"],
+    "prefix" : ["Is the person able to wash and dress themselves on discharge?"],
+    "suffix" : ["Reference to the triggering observation."],
+    "period" : {
+      "start" : "2022-05-28"
+    }
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+5581992570831",
+    "use" : "temp"
+  }],
+  "gender" : "unknown",
+  "birthDate" : "2010-10-08",
+  "deceasedBoolean" : true,
+  "address" : [{
+    "line" : ["48 Astoria Drive"],
+    "city" : "Coventry",
+    "postalCode" : "CV4 9ZY"
+  }],
+  "maritalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code" : "S"
+    }]
+  },
+  "multipleBirthBoolean" : false,
+  "photo" : [{
+    "contentType" : "image/jpeg",
+    "url" : "Binary/f006"
+  }],
+  "contact" : [{
+    "relationship" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "code" : "NSIS"
+      }]
+    }],
+    "role" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+        "code" : "WIT"
+      }]
+    }],
+    "name" : {
+      "use" : "usual",
+      "text" : "Please provide the stop date of radiotherapy",
+      "family" : "Analysen Labor Gantenbein Elektrolyte",
+      "given" : ["An absolute URI that is a formal reference to where this parameter was first defined, so that a client can be confident of the meaning of the search parameter (a reference to [SearchParameter.url](searchparameter-definitions.html#SearchParameter.url)). This element SHALL be populated if the search parameter refers to a SearchParameter defined by the FHIR core specification or externally defined IGs. This SHOULD be present, and matches refers to a SearchParameter by its canonical URL. If systems wish to document their support for modifiers, comparators, target resource types, and chained parameters, they should do using a search parameter resource. This element SHALL be populated if the search parameter refers to a SearchParameter defined by the FHIR core specification or externally defined IGs."],
+      "prefix" : ["Unable to resolve 'consent' sub-questionnaire"],
+      "suffix" : ["Canonical identifier for this compartment definition, represented as a URI (globally unique)"],
+      "period" : {
+        "start" : "2027-03-02T00:36:36+10:00",
+        "end" : "2027-03-02T00:36:36+10:00"
+      }
+    },
+    "additionalName" : [{
+      "use" : "old",
+      "text" : "Pregnancy Testing",
+      "family" : "LDL Cholesterol result, if reported. Observations can contain observations.",
+      "given" : ["Indicates how likely the outcome is (in the specified timeframe), expressed as a qualitative value (e.g. low, medium, or high)."],
+      "prefix" : ["define \"SDE Lab Observation\":  [Observation: code ~ \"Laboratory\"] LabObservations"],
+      "suffix" : ["The status of this implementation guide. Enables tracking the life-cycle of the content. Allows filtering of implementation guides that are appropriate for use versus not.\n\nSee guidance around (not) making local changes to elements [here](canonicalresource.html#localization)."],
+      "period" : {
+        "start" : "2025-04-07T23:36:36+10:00",
+        "end" : "2025-04-07T23:36:36+10:00"
+      }
+    }],
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "999-999-9999",
+      "use" : "home"
+    }],
+    "address" : {
+      "use" : "home",
+      "type" : "postal",
+      "text" : "台北市北投區明德路365號",
+      "line" : ["明德路365號"],
+      "city" : "台北市",
+      "postalCode" : "11219",
+      "country" : "Taiwan"
+    },
+    "additionalAddress" : [{
+      "use" : "work",
+      "line" : ["123 Smart St"],
+      "city" : "PleasantVille",
+      "state" : "Vic",
+      "postalCode" : "3999"
+    }],
+    "gender" : "unknown",
+    "organization" : {
+      "reference" : "Organization/3918a343-8d0f-4000-86ef-1aecf3c48731"
+    },
+    "period" : {
+      "start" : "2020-01-01",
+      "end" : "2021-12-31"
+    }
+  }],
+  "communication" : [{
+    "language" : {
+      "coding" : [{
+        "system" : "http://fhir.hie.moh.gov.my/CodeSystem/questionnaire-my-core",
+        "code" : "03"
+      }],
+      "text" : "A legal or geographic region in which the questionnaire is intended to be used. It may be possible for the questionnaire to be used in jurisdictions other than those for which it was originally designed or intended.\n\nDEPRECATION NOTE: For consistency, implementations are encouraged to migrate to using the new 'jurisdiction' code in the useContext element.  (I.e. useContext.code indicating http://terminology.hl7.org/CodeSystem/usage-context-type#jurisdiction and useContext.valueCodeableConcept indicating the jurisdiction.)"
+    },
+    "preferred" : true
+  }],
+  "generalPractitioner" : [{
+    "reference" : "Organization/ca123804-cd68-4c4c-abbb-089c3a371e0f"
+  }],
+  "managingOrganization" : {
+    "reference" : "Organization/8d761b1c-9c9c-444d-924e-bb520e2b6f14"
+  },
+  "link" : [{
+    "other" : {
+      "reference" : "RelatedPerson/41bed546-4eae-40be-98a0-58b44a6e0de5"
+    },
+    "type" : "refer"
+  }]
+}
