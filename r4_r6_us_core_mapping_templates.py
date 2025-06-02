@@ -8,7 +8,7 @@
 
 # %%
 import json
-templates = {'AllergyIntolerance':'''
+templates = {'AllergyIntolerance':
 {
   "resourceType": "AllergyIntolerance",
   "id": "{{ AllergyIntolerance.id }}",
@@ -59,7 +59,7 @@ templates = {'AllergyIntolerance':'''
     }
   ]
 }
-''',
+,
 }
 
 
