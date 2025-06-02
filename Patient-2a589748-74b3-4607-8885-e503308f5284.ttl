@@ -1,0 +1,163 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-r6-sandbox/Patient/2a589748-74b3-4607-8885-e503308f5284> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "2a589748-74b3-4607-8885-e503308f5284"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient 2a589748-74b3-4607-8885-e503308f5284</b></p><a name=\"2a589748-74b3-4607-8885-e503308f5284\"> </a><a name=\"hc2a589748-74b3-4607-8885-e503308f5284\"> </a><a name=\"2a589748-74b3-4607-8885-e503308f5284-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-patient.html\">US Core Patient Profileversion: null0.1.0)</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Zustimmende Bewertung(nickname) Female, DoB: 1958-01-30 ( 12345 (use: PhilhealthID, ))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td>false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus C}\">Common Law</span></td><td style=\"background-color: #f3f5da\" title=\"Known multipleBirth status of Patient\">Multiple Birth:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"mailto:jane@doe.ca\">jane@doe.ca</a></li><li>RUA X, 987 - BAIRRO Y FLORIANOPOLIS SC 88040000 BRA (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Language spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes:{http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes VM}\">Name for this operation definition (computer friendly)</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: half-brother\">half-brother:</td><td colspan=\"3\"><ul><li>1x/dag(8u) 40mg (=1st)(Anonymous) (Female)</li><li>TAPAK 1200-20C JALAN ILYAS KAMPUNG TENGAH KAJANG 43000 MYS </li><li><a href=\"mailto:patient.carer@gmail.com\">patient.carer@gmail.com</a></li><li>Organization:<a href=\"Organization/adedac46-cb3e-46cf-8941-c5294b3d2a5e\">Organization/adedac46-cb3e-46cf-8941-c5294b3d2a5e</a></li><li>Valid Period:2020-01-01 --&gt; 2021-12-31</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>General Practitioner: <a href=\"Practitioner/b0cea3e5-d317-4a92-b04d-91dabe32d474\">Practitioner/b0cea3e5-d317-4a92-b04d-91dabe32d474</a></li><li>Managing Organization: <a href=\"Organization/f72e4e30-8e9d-438a-a96a-078d85bcba26\">Organization/f72e4e30-8e9d-438a-a96a-078d85bcba26</a></li><li>Please refer to: <a href=\"RelatedPerson/a31fc255-0aac-47bc-b97c-e60a848e6da7\">RelatedPerson/a31fc255-0aac-47bc-b97c-e60a848e6da7</a></li></ul></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "PhilhealthID" ] ;
+     fhir:value [ fhir:v "12345" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "nickname" ] ;
+     fhir:text [ fhir:v "Zustimmende Bewertung" ] ;
+     fhir:family [ fhir:v "Categorization of Composition" ] ;
+     fhir:given ( [ fhir:v "Address of end-point" ] ) ;
+     fhir:prefix ( [ fhir:v "128 - 250 mg/dL" ] ) ;
+     fhir:suffix ( [ fhir:v "Name anggota yang memberi pendidikan" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2022-10-01"^^xsd:date ] ;
+       fhir:end [ fhir:v "2022-12-31"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "jane@doe.ca" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1958-01-30"^^xsd:date] ; # 
+  fhir:deceased [
+     a fhir:boolean ;
+     fhir:v false
+  ] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "RUA X, 987 - BAIRRO Y" ] ) ;
+     fhir:city [ fhir:v "FLORIANOPOLIS" ] ;
+     fhir:state [ fhir:v "SC" ] ;
+     fhir:postalCode [ fhir:v "88040000" ] ;
+     fhir:country [ fhir:v "BRA" ]
+  ] ) ; # 
+  fhir:maritalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "C" ]
+     ] )
+  ] ; # 
+  fhir:multipleBirth [
+     a fhir:boolean ;
+     fhir:v true
+  ] ; # 
+  fhir:photo ( [
+     fhir:contentType [ fhir:v "image/jpeg" ] ;
+     fhir:url [ fhir:v "patient.png"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "HBRO" ]
+       ] )
+     ] ) ;
+     fhir:role ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0131"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "E" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:use [ fhir:v "anonymous" ] ;
+       fhir:text [ fhir:v "1x/dag(8u) 40mg (=1st)" ] ;
+       fhir:family [ fhir:v "Size of the population" ] ;
+       fhir:given ( [ fhir:v "TXA-19" ] ) ;
+       fhir:prefix ( [ fhir:v "Indicate if the patient carries a germline mutation predisposing breast cancer" ] ) ;
+       fhir:suffix ( [ fhir:v "For clopidogrel, individuals with this diplotype are expected to have significantly reduced platelet inhibition, increased residual platelet aggregation and increased risk for adverse cardiovascular events in response to clopidogrel. Alternative antiplatelet therapy (if no contraindication) is recommended. Refer to current guidelines for dosage and recommendations at https://cpicpgx.org/guidelines/guideline- for-clopidogrel-and-cyp2c19/" ] ) ;
+       fhir:period [
+         fhir:start [ fhir:v "2018-02-27T00:36:36+10:00"^^xsd:dateTime ] ;
+         fhir:end [ fhir:v "2018-02-27T00:36:36+10:00"^^xsd:dateTime ]
+       ]
+     ] ;
+     fhir:additionalName ( [
+       fhir:use [ fhir:v "anonymous" ] ;
+       fhir:text [ fhir:v "Substance.ingredient.substance" ] ;
+       fhir:family [ fhir:v "test-panel" ] ;
+       fhir:given ( [ fhir:v "MMECalculator" ] ) ;
+       fhir:prefix ( [ fhir:v "Call the clinic at 555-555-5555 to set up your appointments" ] ) ;
+       fhir:suffix ( [ fhir:v "PV1-3 / PV1-6 / PV1-11 / PV1-42 / PV1-43" ] ) ;
+       fhir:period [
+         fhir:start [ fhir:v "2019-07-29T09:36:36-04:00"^^xsd:dateTime ] ;
+         fhir:end [ fhir:v "2019-07-29T09:36:36-04:00"^^xsd:dateTime ]
+       ]
+     ] ) ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "patient.carer@gmail.com" ]
+     ] ) ;
+     fhir:address [
+       fhir:line ( [ fhir:v "TAPAK 1200-20C JALAN ILYAS KAMPUNG TENGAH" ] ) ;
+       fhir:city [ fhir:v "KAJANG" ] ;
+       fhir:postalCode [ fhir:v "43000" ] ;
+       fhir:country [ fhir:v "MYS" ]
+     ] ;
+     fhir:additionalAddress ( [
+       fhir:use [ fhir:v "work" ] ;
+       fhir:line ( [ fhir:v "123 Smart St" ] ) ;
+       fhir:city [ fhir:v "PleasantVille" ] ;
+       fhir:state [ fhir:v "Vic" ] ;
+       fhir:postalCode [ fhir:v "3999" ]
+     ] ) ;
+     fhir:gender [ fhir:v "female" ] ;
+     fhir:organization [
+       fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Organization/adedac46-cb3e-46cf-8941-c5294b3d2a5e> ;
+       fhir:reference [ fhir:v "Organization/adedac46-cb3e-46cf-8941-c5294b3d2a5e" ]
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2020-01-01"^^xsd:date ] ;
+       fhir:end [ fhir:v "2021-12-31"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:communication ( [
+     fhir:language [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "VM" ]
+       ] ) ;
+       fhir:text [ fhir:v "Name for this operation definition (computer friendly)" ]
+     ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) ; # 
+  fhir:generalPractitioner ( [
+     fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Practitioner/b0cea3e5-d317-4a92-b04d-91dabe32d474> ;
+     fhir:reference [ fhir:v "Practitioner/b0cea3e5-d317-4a92-b04d-91dabe32d474" ]
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Organization/f72e4e30-8e9d-438a-a96a-078d85bcba26> ;
+     fhir:reference [ fhir:v "Organization/f72e4e30-8e9d-438a-a96a-078d85bcba26" ]
+  ] ; # 
+  fhir:link ( [
+     fhir:other [
+       fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/RelatedPerson/a31fc255-0aac-47bc-b97c-e60a848e6da7> ;
+       fhir:reference [ fhir:v "RelatedPerson/a31fc255-0aac-47bc-b97c-e60a848e6da7" ]
+     ] ;
+     fhir:type [ fhir:v "refer" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

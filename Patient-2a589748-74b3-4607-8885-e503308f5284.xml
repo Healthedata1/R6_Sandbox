@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="2a589748-74b3-4607-8885-e503308f5284"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient 2a589748-74b3-4607-8885-e503308f5284</b></p><a name="2a589748-74b3-4607-8885-e503308f5284"> </a><a name="hc2a589748-74b3-4607-8885-e503308f5284"> </a><a name="2a589748-74b3-4607-8885-e503308f5284-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-patient.html">US Core Patient Profileversion: null0.1.0)</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Zustimmende Bewertung(nickname) Female, DoB: 1958-01-30 ( 12345 (use: PhilhealthID, ))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td>true</td><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td>false</td></tr><tr><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus C}">Common Law</span></td><td style="background-color: #f3f5da" title="Known multipleBirth status of Patient">Multiple Birth:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="mailto:jane@doe.ca">jane@doe.ca</a></li><li>RUA X, 987 - BAIRRO Y FLORIANOPOLIS SC 88040000 BRA (home)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Language spoken">Language:</td><td colspan="3"><span title="Codes:{http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes VM}">Name for this operation definition (computer friendly)</span></td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: half-brother">half-brother:</td><td colspan="3"><ul><li>1x/dag(8u) 40mg (=1st)(Anonymous) (Female)</li><li>TAPAK 1200-20C JALAN ILYAS KAMPUNG TENGAH KAJANG 43000 MYS </li><li><a href="mailto:patient.carer@gmail.com">patient.carer@gmail.com</a></li><li>Organization:<a href="Organization/adedac46-cb3e-46cf-8941-c5294b3d2a5e">Organization/adedac46-cb3e-46cf-8941-c5294b3d2a5e</a></li><li>Valid Period:2020-01-01 --&gt; 2021-12-31</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="Practitioner/b0cea3e5-d317-4a92-b04d-91dabe32d474">Practitioner/b0cea3e5-d317-4a92-b04d-91dabe32d474</a></li><li>Managing Organization: <a href="Organization/f72e4e30-8e9d-438a-a96a-078d85bcba26">Organization/f72e4e30-8e9d-438a-a96a-078d85bcba26</a></li><li>Please refer to: <a href="RelatedPerson/a31fc255-0aac-47bc-b97c-e60a848e6da7">RelatedPerson/a31fc255-0aac-47bc-b97c-e60a848e6da7</a></li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <use value="PhilhealthID"/>
+    <value value="12345"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="nickname"/>
+    <text value="Zustimmende Bewertung"/>
+    <family value="Categorization of Composition"/>
+    <given value="Address of end-point"/>
+    <prefix value="128 - 250 mg/dL"/>
+    <suffix value="Name anggota yang memberi pendidikan"/>
+    <period>
+      <start value="2022-10-01"/>
+      <end value="2022-12-31"/>
+    </period>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="jane@doe.ca"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="1958-01-30"/>
+  <deceasedBoolean value="false"/>
+  <address>
+    <use value="home"/>
+    <line value="RUA X, 987 - BAIRRO Y"/>
+    <city value="FLORIANOPOLIS"/>
+    <state value="SC"/>
+    <postalCode value="88040000"/>
+    <country value="BRA"/>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="C"/>
+    </coding>
+  </maritalStatus>
+  <multipleBirthBoolean value="true"/>
+  <photo>
+    <contentType value="image/jpeg"/>
+    <url value="patient.png"/>
+  </photo>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="HBRO"/>
+      </coding>
+    </relationship>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+        <code value="E"/>
+      </coding>
+    </role>
+    <name>
+      <use value="anonymous"/>
+      <text value="1x/dag(8u) 40mg (=1st)"/>
+      <family value="Size of the population"/>
+      <given value="TXA-19"/>
+      <prefix value="Indicate if the patient carries a germline mutation predisposing breast cancer"/>
+      <suffix value="For clopidogrel, individuals with this diplotype are expected to have significantly reduced platelet inhibition, increased residual platelet aggregation and increased risk for adverse cardiovascular events in response to clopidogrel. Alternative antiplatelet therapy (if no contraindication) is recommended. Refer to current guidelines for dosage and recommendations at https://cpicpgx.org/guidelines/guideline- for-clopidogrel-and-cyp2c19/"/>
+      <period>
+        <start value="2018-02-27T00:36:36+10:00"/>
+        <end value="2018-02-27T00:36:36+10:00"/>
+      </period>
+    </name>
+    <additionalName>
+      <use value="anonymous"/>
+      <text value="Substance.ingredient.substance"/>
+      <family value="test-panel"/>
+      <given value="MMECalculator"/>
+      <prefix value="Call the clinic at 555-555-5555 to set up your appointments"/>
+      <suffix value="PV1-3 / PV1-6 / PV1-11 / PV1-42 / PV1-43"/>
+      <period>
+        <start value="2019-07-29T09:36:36-04:00"/>
+        <end value="2019-07-29T09:36:36-04:00"/>
+      </period>
+    </additionalName>
+    <telecom>
+      <system value="email"/>
+      <value value="patient.carer@gmail.com"/>
+    </telecom>
+    <address>
+      <line value="TAPAK 1200-20C JALAN ILYAS KAMPUNG TENGAH"/>
+      <city value="KAJANG"/>
+      <postalCode value="43000"/>
+      <country value="MYS"/>
+    </address>
+    <additionalAddress>
+      <use value="work"/>
+      <line value="123 Smart St"/>
+      <city value="PleasantVille"/>
+      <state value="Vic"/>
+      <postalCode value="3999"/>
+    </additionalAddress>
+    <gender value="female"/>
+    <organization>
+      <reference value="Organization/adedac46-cb3e-46cf-8941-c5294b3d2a5e"/>
+    </organization>
+    <period>
+      <start value="2020-01-01"/>
+      <end value="2021-12-31"/>
+    </period>
+  </contact>
+  <communication>
+    <language>
+      <coding>
+        <system value="http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes"/>
+        <code value="VM"/>
+      </coding>
+      <text value="Name for this operation definition (computer friendly)"/>
+    </language>
+    <preferred value="false"/>
+  </communication>
+  <generalPractitioner>
+    <reference value="Practitioner/b0cea3e5-d317-4a92-b04d-91dabe32d474"/>
+  </generalPractitioner>
+  <managingOrganization>
+    <reference value="Organization/f72e4e30-8e9d-438a-a96a-078d85bcba26"/>
+  </managingOrganization>
+  <link>
+    <other>
+      <reference value="RelatedPerson/a31fc255-0aac-47bc-b97c-e60a848e6da7"/>
+    </other>
+    <type value="refer"/>
+  </link>
+</Patient>

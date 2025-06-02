@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="375a4252-b189-4dbc-bc44-1bc6611a7803"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient 375a4252-b189-4dbc-bc44-1bc6611a7803</b></p><a name="375a4252-b189-4dbc-bc44-1bc6611a7803"> </a><a name="hc375a4252-b189-4dbc-bc44-1bc6611a7803"> </a><a name="375a4252-b189-4dbc-bc44-1bc6611a7803-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-patient.html">US Core Patient Profileversion: null0.1.0)</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">BARS Message Definition Booking - Request - Cancelled(temp) Female, DoB: 1958-01-01 ( http://eng.it/sid/docIde#EK000001)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td>false</td><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td>2003-06-24 12:35:07-0400</td></tr><tr><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus A}">Annulled</span></td><td style="background-color: #f3f5da" title="Known multipleBirth status of Patient">Multiple Birth:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="mailto:abc">abc</a></li><li>183 MOUNTAIN VIEW ST MOUNDS OK 74048 US </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Language spoken">Language:</td><td colspan="3"><span title="Codes:{http://fhir.kl.dk/ffinst/CodeSystem/KLToolsCodes 7aaccc2e-ead3-41f0-a9ba-091f2e539753}">Same source and target systems</span></td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: natural sibling">natural sibling:</td><td colspan="3"><ul><li>[0-9]*(Name changed for Marriage) (Other)</li><li>Promenade des Anglais 111 Lyon 69001 FR </li><li><a href="mailto:ioannisioannou@gmail.com">ioannisioannou@gmail.com</a></li><li>Organization:<a href="Organization/0c2e1091-c6b0-42ef-bf69-8141b7627a40">Organization/0c2e1091-c6b0-42ef-bf69-8141b7627a40</a></li><li>Valid Period:2020-01-01 --&gt; 2021-12-31</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="Organization/1307e26a-dfdc-4e94-88c4-32e02fe1856f">Organization/1307e26a-dfdc-4e94-88c4-32e02fe1856f</a></li><li>Managing Organization: <a href="Organization/22804768-ec5e-4bf0-9705-0279c5f87983">Organization/22804768-ec5e-4bf0-9705-0279c5f87983</a></li><li>Also see: <a href="RelatedPerson/ee575357-eb94-481d-8ea0-7f754e8ef20e">RelatedPerson/ee575357-eb94-481d-8ea0-7f754e8ef20e</a></li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="http://eng.it/sid/docIde"/>
+    <value value="EK000001"/>
+  </identifier>
+  <active value="false"/>
+  <name>
+    <use value="temp"/>
+    <text value="BARS Message Definition Booking - Request - Cancelled"/>
+    <family value="Age at Diagnosis"/>
+    <given value="NamingSystem.contact.name"/>
+    <prefix value="Whether the organization's record is still in active use"/>
+    <suffix value="Business version of the search parameter"/>
+    <period>
+      <start value="2026-12-28T09:36:36-05:00"/>
+      <end value="2026-12-28T09:36:36-05:00"/>
+    </period>
+  </name>
+  <telecom>
+    <system value="email"/>
+    <value value="abc"/>
+    <use value="old"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="1958-01-01"/>
+  <deceasedDateTime value="2003-06-24T12:35:07-04:00"/>
+  <address>
+    <line value="183 MOUNTAIN VIEW ST"/>
+    <city value="MOUNDS"/>
+    <state value="OK"/>
+    <postalCode value="74048"/>
+    <country value="US"/>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="A"/>
+    </coding>
+  </maritalStatus>
+  <multipleBirthBoolean value="true"/>
+  <photo>
+    <contentType value="text/plain; charset=UTF-8, image/png"/>
+    <language value="en-AU"/>
+    <url value="http://www.acme.com/logo-small.png"/>
+    <size value="1037423195"/>
+    <title value="Official Corporate Logo"/>
+  </photo>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="NSIB"/>
+      </coding>
+    </relationship>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="WIT"/>
+      </coding>
+    </role>
+    <name>
+      <use value="maiden"/>
+      <text value="[0-9]*"/>
+      <family value="Lake Death Location - Lat/Long"/>
+      <given value="Brian"/>
+      <prefix value="Bayi terkejut pada bunyi kuat"/>
+      <suffix value="Physical training group"/>
+      <period>
+        <start value="2017-06-06"/>
+      </period>
+    </name>
+    <additionalName>
+      <use value="official"/>
+      <text value="27a"/>
+      <family value="An unwanted side effect or negative outcome of the subject of this resource when being used for this indication"/>
+      <given value="A description of a landmark on the body used as a reference to locate something else."/>
+      <prefix value="Scen2ObsCalories"/>
+      <suffix value="Does your diabetes limit your activities?"/>
+      <period>
+        <start value="2022-10-03T16:25:26+02:00"/>
+        <end value="2022-10-04T17:25:26+02:00"/>
+      </period>
+    </additionalName>
+    <telecom>
+      <system value="email"/>
+      <value value="ioannisioannou@gmail.com"/>
+      <use value="home"/>
+    </telecom>
+    <address>
+      <line value="Promenade des Anglais 111"/>
+      <city value="Lyon"/>
+      <postalCode value="69001"/>
+      <country value="FR"/>
+    </address>
+    <additionalAddress>
+      <use value="work"/>
+      <line value="123 Smart St"/>
+      <city value="PleasantVille"/>
+      <state value="Vic"/>
+      <postalCode value="3999"/>
+    </additionalAddress>
+    <gender value="other"/>
+    <organization>
+      <reference value="Organization/0c2e1091-c6b0-42ef-bf69-8141b7627a40"/>
+    </organization>
+    <period>
+      <start value="2020-01-01"/>
+      <end value="2021-12-31"/>
+    </period>
+  </contact>
+  <communication>
+    <language>
+      <coding>
+        <system value="http://fhir.kl.dk/ffinst/CodeSystem/KLToolsCodes"/>
+        <code value="7aaccc2e-ead3-41f0-a9ba-091f2e539753"/>
+      </coding>
+      <text value="Same source and target systems"/>
+    </language>
+    <preferred value="false"/>
+  </communication>
+  <generalPractitioner>
+    <reference value="Organization/1307e26a-dfdc-4e94-88c4-32e02fe1856f"/>
+  </generalPractitioner>
+  <managingOrganization>
+    <reference value="Organization/22804768-ec5e-4bf0-9705-0279c5f87983"/>
+  </managingOrganization>
+  <link>
+    <other>
+      <reference value="RelatedPerson/ee575357-eb94-481d-8ea0-7f754e8ef20e"/>
+    </other>
+    <type value="seealso"/>
+  </link>
+</Patient>

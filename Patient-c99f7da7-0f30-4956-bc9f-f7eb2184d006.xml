@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="c99f7da7-0f30-4956-bc9f-f7eb2184d006"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Patient c99f7da7-0f30-4956-bc9f-f7eb2184d006</b></p><a name="c99f7da7-0f30-4956-bc9f-f7eb2184d006"> </a><a name="hcc99f7da7-0f30-4956-bc9f-f7eb2184d006"> </a><a name="c99f7da7-0f30-4956-bc9f-f7eb2184d006-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-patient.html">US Core Patient Profileversion: null0.1.0)</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Transfer From Acute Care Facility to LTCF in Past Four Weeks(old) Other, DoB: 1948-11-23 ( http://hl7.org/fhir/sid/us-ssn#United States Social Security Number#000006521 (use: official, ))</p><hr/><table role="presentation" class="none"><tr><td><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td>true</td><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td>true</td></tr><tr><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus T}">Domestic partner</span></td><td style="background-color: #f3f5da" title="Known multipleBirth status of Patient">Multiple Birth:</td><td colspan="3">false</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li>ph: 586-555-7887(Mobile)</li><li>桃園市桃園區成功路三段38號</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Language spoken">Language:</td><td colspan="3"><span title="Codes:{http://fhir.hie.moh.gov.my/CodeSystem/questionnaire-my-core 02}">If Abnormal, Cornea:</span></td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: half-sister">half-sister:</td><td colspan="3"><ul><li>Comments to go on overload(Temp) (Female)</li><li>ALAM SARI KAJANG 43000 MYS </li><li>ph: 077553/32212</li><li>Organization:<a href="Organization/3c5c38bd-4da1-4c23-a64b-29e8fdbfcd73">Organization/3c5c38bd-4da1-4c23-a64b-29e8fdbfcd73</a></li><li>Valid Period:2020-01-01 --&gt; 2021-12-31</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="Organization/f8f1d624-4e42-45d6-b73d-1373a053ade9">Organization/f8f1d624-4e42-45d6-b73d-1373a053ade9</a></li><li>Managing Organization: <a href="Organization/82f87f96-3254-44ed-a3ea-f2898667cb03">Organization/82f87f96-3254-44ed-a3ea-f2898667cb03</a></li><li>Please refer to: <a href="Patient/20a9f8cf-f026-4fb4-a878-29ad1fd7938c">Patient/20a9f8cf-f026-4fb4-a878-29ad1fd7938c</a></li></ul></td></tr></table></td><td><img src="7f683193-049f-42b2-ac37-234471c9c5ee.gif" alt="Patient Photo"/></td></tr></table></div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <system value="http://hl7.org/fhir/sid/us-ssn"/>
+    <value value="000006521"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <use value="old"/>
+    <text value="Transfer From Acute Care Facility to LTCF in Past Four Weeks"/>
+    <family value="3.16.1"/>
+    <given value="REC-ID"/>
+    <prefix value="Clinical Data to Date"/>
+    <suffix value="Critical environmental, health or physical risks or hazards. For example 'Do not operate heavy machinery', 'May cause drowsiness'"/>
+    <period>
+      <start value="2023-08-01"/>
+      <end value="2023-08-15"/>
+    </period>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="586-555-7887"/>
+    <use value="mobile"/>
+  </telecom>
+  <gender value="other"/>
+  <birthDate value="1948-11-23"/>
+  <deceasedBoolean value="true"/>
+  <address>
+    <text value="桃園市桃園區成功路三段38號"/>
+    <line value="成功路"/>
+    <city value="桃園區"/>
+    <district value="桃園市"/>
+    <country value="TW"/>
+  </address>
+  <maritalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+      <code value="T"/>
+    </coding>
+  </maritalStatus>
+  <multipleBirthBoolean value="false"/>
+  <photo>
+    <contentType value="image/gif"/>
+    <data value="R0lGODlhEwARAPcAAAAAAAAA/+9aAO+1AP/WAP/eAP/eCP/eEP/eGP/nAP/nCP/nEP/nIf/nKf/nUv/nWv/vAP/vCP/vEP/vGP/vIf/vKf/vMf/vOf/vWv/vY//va//vjP/3c//3lP/3nP//tf//vf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAAEALAAAAAATABEAAAi+AAMIDDCgYMGBCBMSvMCQ4QCFCQcwDBGCA4cLDyEGECDxAoAQHjxwyKhQAMeGIUOSJJjRpIAGDS5wCDly4AALFlYOgHlBwwOSNydM0AmzwYGjBi8IHWoTgQYORg8QIGDAwAKhESI8HIDgwQaRDI1WXXAhK9MBBzZ8/XDxQoUFZC9IiCBh6wEHGz6IbNuwQoSpWxEgyLCXL8O/gAnylNlW6AUEBRIL7Og3KwQIiCXb9HsZQoIEUzUjNEiaNMKAAAA7"/>
+  </photo>
+  <contact>
+    <relationship>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="HSIS"/>
+      </coding>
+    </relationship>
+    <role>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+        <code value="POWATT"/>
+      </coding>
+    </role>
+    <name>
+      <use value="temp"/>
+      <text value="Comments to go on overload"/>
+      <family value="RuleFilters"/>
+      <given value="maria.smith@CCTU.med.edu"/>
+      <prefix value="Body site administered to"/>
+      <suffix value="BARS Message Definition ServiceRequest - Request - Cancelled"/>
+      <period>
+        <start value="2022-11-17T00:00:00+01:00"/>
+        <end value="2022-11-24T23:59:59+01:00"/>
+      </period>
+    </name>
+    <additionalName>
+      <use value="old"/>
+      <text value="A description of what is most important to you&#xA;Emergency Information : - Include any essential information that any professional in health and social care should know about the you in any situation, including emergencies.&#xA;Other Information : -This could include : - Values, Spirituality/religion, Ethnicity, Culture, Pets, Goals and aspirations, Meaningful activities including leisure activities, visiting places, sport and exercise, listening to music, employment, education, volunteering"/>
+      <family value="A reference to the actual resource from which data was derived."/>
+      <given value="A short descriptive label the version to be used in tables or diagrams."/>
+      <prefix value="Janin"/>
+      <suffix value="Structure Definition used by this map"/>
+      <period>
+        <start value="2027-01-05T09:36:36-05:00"/>
+        <end value="2027-01-11T09:36:36-05:00"/>
+      </period>
+    </additionalName>
+    <telecom>
+      <system value="phone"/>
+      <value value="077553/32212"/>
+    </telecom>
+    <address>
+      <line value="ALAM SARI"/>
+      <city value="KAJANG"/>
+      <postalCode value="43000"/>
+      <country value="MYS"/>
+    </address>
+    <additionalAddress>
+      <use value="work"/>
+      <line value="123 Smart St"/>
+      <city value="PleasantVille"/>
+      <state value="Vic"/>
+      <postalCode value="3999"/>
+    </additionalAddress>
+    <gender value="female"/>
+    <organization>
+      <reference value="Organization/3c5c38bd-4da1-4c23-a64b-29e8fdbfcd73"/>
+    </organization>
+    <period>
+      <start value="2020-01-01"/>
+      <end value="2021-12-31"/>
+    </period>
+  </contact>
+  <communication>
+    <language>
+      <coding>
+        <system value="http://fhir.hie.moh.gov.my/CodeSystem/questionnaire-my-core"/>
+        <code value="02"/>
+      </coding>
+      <text value="If Abnormal, Cornea:"/>
+    </language>
+    <preferred value="false"/>
+  </communication>
+  <generalPractitioner>
+    <reference value="Organization/f8f1d624-4e42-45d6-b73d-1373a053ade9"/>
+  </generalPractitioner>
+  <managingOrganization>
+    <reference value="Organization/82f87f96-3254-44ed-a3ea-f2898667cb03"/>
+  </managingOrganization>
+  <link>
+    <other>
+      <reference value="Patient/20a9f8cf-f026-4fb4-a878-29ad1fd7938c"/>
+    </other>
+    <type value="refer"/>
+  </link>
+</Patient>

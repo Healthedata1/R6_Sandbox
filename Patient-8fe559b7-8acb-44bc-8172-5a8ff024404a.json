@@ -1,0 +1,138 @@
+{
+  "resourceType" : "Patient",
+  "id" : "8fe559b7-8acb-44bc-8172-5a8ff024404a",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient 8fe559b7-8acb-44bc-8172-5a8ff024404a</b></p><a name=\"8fe559b7-8acb-44bc-8172-5a8ff024404a\"> </a><a name=\"hc8fe559b7-8acb-44bc-8172-5a8ff024404a\"> </a><a name=\"8fe559b7-8acb-44bc-8172-5a8ff024404a-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-patient.html\">US Core Patient Profileversion: null0.1.0)</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Organization Role.  CONCEPT DOMAIN: OrganizationEntityType Description: Further classifies entities of EntityClass ORG.(maiden) Other, DoB: 1969 ( http://ehealthontario.ca/fhir/NamingSystem/id-example1-uri#WSD00038991)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td>false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus T}\">Domestic partner</span></td><td style=\"background-color: #f3f5da\" title=\"Known multipleBirth status of Patient\">Multiple Birth:</td><td colspan=\"3\">1</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"mailto:anitajansen@gmail.com\">anitajansen@gmail.com</a></li><li>100 Main St Metropolis Il 44130 USA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Language spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes:{http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes OTHINSTRES}\">Kemahiran ke tandas (Toileting)</span> (preferred)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: fraternal twin sister\">fraternal twin sister:</td><td colspan=\"3\"><ul><li>Informatiker(Name changed for Marriage) (Male)</li><li>Stitswerd 9999 XA NLD (home)</li><li>ph: 905-333-4444</li><li>Organization:<a href=\"Organization/be21d7fb-1932-4fd4-b628-cb091e21c93d\">Organization/be21d7fb-1932-4fd4-b628-cb091e21c93d</a></li><li>Valid Period:2012 --&gt; (ongoing)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>General Practitioner: <a href=\"Practitioner/4f5ab111-34f6-4a5e-b019-19102e90c33e\">Practitioner/4f5ab111-34f6-4a5e-b019-19102e90c33e</a></li><li>Managing Organization: <a href=\"Organization/c552db1a-d56d-4de3-b8c7-b2f2269fd56f\">Organization/c552db1a-d56d-4de3-b8c7-b2f2269fd56f</a></li><li>Please refer to: <a href=\"Patient/e4aaac3e-d4bf-4073-8057-bfdb3cd770ef\">Patient/e4aaac3e-d4bf-4073-8057-bfdb3cd770ef</a></li></ul></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "http://ehealthontario.ca/fhir/NamingSystem/id-example1-uri",
+    "value" : "WSD00038991"
+  }],
+  "active" : true,
+  "name" : [{
+    "use" : "maiden",
+    "text" : "Organization Role.  CONCEPT DOMAIN: OrganizationEntityType Description: Further classifies entities of EntityClass ORG.",
+    "family" : "Protocol details",
+    "given" : ["Eligibility Criteria"],
+    "prefix" : ["Rate your doctor:"],
+    "suffix" : ["Assessment Method"],
+    "period" : {
+      "end" : "2022-12-09T15:41:00.000Z"
+    }
+  }],
+  "telecom" : [{
+    "system" : "email",
+    "value" : "anitajansen@gmail.com"
+  }],
+  "gender" : "other",
+  "birthDate" : "1969",
+  "deceasedBoolean" : false,
+  "address" : [{
+    "line" : ["100 Main St"],
+    "city" : "Metropolis",
+    "state" : "Il",
+    "postalCode" : "44130",
+    "country" : "USA"
+  }],
+  "maritalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+      "code" : "T"
+    }]
+  },
+  "multipleBirthInteger" : 1,
+  "photo" : [{
+    "contentType" : "text/plain; charset=UTF-8, image/png",
+    "language" : "en-AU",
+    "url" : "http://www.acme.com/logo-small.png",
+    "size" : "1448181448",
+    "title" : "Official Corporate Logo"
+  }],
+  "contact" : [{
+    "relationship" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "code" : "FTWINSIS"
+      }]
+    }],
+    "role" : [{
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+        "code" : "WIT"
+      }]
+    }],
+    "name" : {
+      "use" : "maiden",
+      "text" : "Informatiker",
+      "family" : "Referral requirements",
+      "given" : [">0.4 Positive; 0.3 to 0.4 Suspect < 0.3 Negative"],
+      "prefix" : ["A copyright statement relating to the Group and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the Group. The short copyright declaration (e.g. (c) '2015+ xyz organization' should be sent in the copyrightLabel element."],
+      "suffix" : ["A description of when an event can occur"],
+      "period" : {
+        "start" : "2025-03-03T09:36:36-05:00",
+        "end" : "2025-03-03T09:36:36-05:00"
+      }
+    },
+    "additionalName" : [{
+      "use" : "temp",
+      "text" : "StructureDefinition.mapping.name",
+      "family" : "5",
+      "given" : ["Additional identifier for the questionnaire"],
+      "prefix" : ["The situation that is being documented as an indicaton for this item"],
+      "suffix" : ["During the past year, how often have you failed to do what was normally expected of you because of drinking?"],
+      "period" : {
+        "end" : "2015-03-21"
+      }
+    }],
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "905-333-4444"
+    }],
+    "address" : {
+      "use" : "home",
+      "city" : "Stitswerd",
+      "postalCode" : "9999 XA",
+      "country" : "NLD"
+    },
+    "additionalAddress" : [{
+      "use" : "work",
+      "line" : ["123 Smart St"],
+      "city" : "PleasantVille",
+      "state" : "Vic",
+      "postalCode" : "3999"
+    }],
+    "gender" : "male",
+    "organization" : {
+      "reference" : "Organization/be21d7fb-1932-4fd4-b628-cb091e21c93d"
+    },
+    "period" : {
+      "start" : "2012"
+    }
+  }],
+  "communication" : [{
+    "language" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes",
+        "code" : "OTHINSTRES"
+      }],
+      "text" : "Kemahiran ke tandas (Toileting)"
+    },
+    "preferred" : true
+  }],
+  "generalPractitioner" : [{
+    "reference" : "Practitioner/4f5ab111-34f6-4a5e-b019-19102e90c33e"
+  }],
+  "managingOrganization" : {
+    "reference" : "Organization/c552db1a-d56d-4de3-b8c7-b2f2269fd56f"
+  },
+  "link" : [{
+    "other" : {
+      "reference" : "Patient/e4aaac3e-d4bf-4073-8057-bfdb3cd770ef"
+    },
+    "type" : "refer"
+  }]
+}

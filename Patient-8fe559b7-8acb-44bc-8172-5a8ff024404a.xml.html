@@ -1,0 +1,407 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>null - XML Representation - Health eData1 R6 Sandbox v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir-ig.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6.4"}
+    h3,h4,h5,h6{--heading-prefix:"6.4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Health eData1 R6 Sandbox</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - CI Build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">IG Home</a>
+  </li>
+  <li>
+    <a href="guidance.html">General Guidance</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifact Index</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+  <li>
+    <a href="ImplementationGuide.html">IG Page</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b></b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 7" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Health eData1 R6 Sandbox - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://www.fhir.org/guides/healthedata1-r6-sandbox/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Patient-8fe559b7-8acb-44bc-8172-5a8ff024404a.html">Narrative Content</a>
+  </li>
+
+
+
+
+  
+    <li>
+      <a href="Patient-8fe559b7-8acb-44bc-8172-5a8ff024404a.json.html">JSON</a>
+    </li>
+  
+
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: null - XML Representation</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          <i>Page standards status:</i> <a href="http://hl7.org/fhir/R5/versions.html#std-process" title="Standard Status">Informative</a>
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="Patient-8fe559b7-8acb-44bc-8172-5a8ff024404a.xml" no-download="true">Raw xml</a> | <a href="Patient-8fe559b7-8acb-44bc-8172-5a8ff024404a.xml" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
+&lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient">Patient</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.id">id</a> <a href="http://hl7.org/fhir/R5/datatypes.html#id">value</a>=&quot;8fe559b7-8acb-44bc-8172-5a8ff024404a&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.meta">meta</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/resource.html#Meta#Meta.profile">profile</a>
+             <a href="http://hl7.org/fhir/R5/datatypes.html#canonical">value</a>=&quot;http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0&quot;/&gt;
+  &lt;/meta&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.text">text</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/narrative.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: Patient 8fe559b7-8acb-44bc-8172-5a8ff024404a&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;8fe559b7-8acb-44bc-8172-5a8ff024404a&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hc8fe559b7-8acb-44bc-8172-5a8ff024404a&quot;&gt; &lt;/a&gt;&lt;a name=&quot;8fe559b7-8acb-44bc-8172-5a8ff024404a-en-US&quot;&gt; &lt;/a&gt;&lt;div style=&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%&quot;&gt;&lt;p style=&quot;margin-bottom: 0px&quot;/&gt;&lt;p style=&quot;margin-bottom: 0px&quot;&gt;Profile: &lt;a href=&quot;StructureDefinition-us-core-patient.html&quot;&gt;US Core Patient Profileversion: null0.1.0)&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=&quot;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;&quot;&gt;Organization Role.  CONCEPT DOMAIN: OrganizationEntityType Description: Further classifies entities of EntityClass ORG.(maiden) Other, DoB: 1969 ( http://ehealthontario.ca/fhir/NamingSystem/id-example1-uri#WSD00038991)&lt;/p&gt;&lt;hr/&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Record is active&quot;&gt;Active:&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Known status of Patient&quot;&gt;Deceased:&lt;/td&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Known Marital status of Patient&quot;&gt;Marital Status:&lt;/td&gt;&lt;td&gt;&lt;span title=&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus T}&quot;&gt;Domestic partner&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Known multipleBirth status of Patient&quot;&gt;Multiple Birth:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Ways to contact the Patient&quot;&gt;Contact Detail&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;mailto:anitajansen@gmail.com&quot;&gt;anitajansen@gmail.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;100 Main St Metropolis Il 44130 USA &lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Language spoken&quot;&gt;Language:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;span title=&quot;Codes:{http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes OTHINSTRES}&quot;&gt;Kemahiran ke tandas (Toileting)&lt;/span&gt; (preferred)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Nominated Contact: fraternal twin sister&quot;&gt;fraternal twin sister:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;Informatiker(Name changed for Marriage) (Male)&lt;/li&gt;&lt;li&gt;Stitswerd 9999 XA NLD (home)&lt;/li&gt;&lt;li&gt;ph: 905-333-4444&lt;/li&gt;&lt;li&gt;Organization:&lt;a href=&quot;Organization/be21d7fb-1932-4fd4-b628-cb091e21c93d&quot;&gt;Organization/be21d7fb-1932-4fd4-b628-cb091e21c93d&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Valid Period:2012 --&amp;gt; (ongoing)&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;background-color: #f3f5da&quot; title=&quot;Patient Links&quot;&gt;Links:&lt;/td&gt;&lt;td colspan=&quot;3&quot;&gt;&lt;ul&gt;&lt;li&gt;General Practitioner: &lt;a href=&quot;Practitioner/4f5ab111-34f6-4a5e-b019-19102e90c33e&quot;&gt;Practitioner/4f5ab111-34f6-4a5e-b019-19102e90c33e&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Managing Organization: &lt;a href=&quot;Organization/c552db1a-d56d-4de3-b8c7-b2f2269fd56f&quot;&gt;Organization/c552db1a-d56d-4de3-b8c7-b2f2269fd56f&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Please refer to: &lt;a href=&quot;Patient/e4aaac3e-d4bf-4073-8057-bfdb3cd770ef&quot;&gt;Patient/e4aaac3e-d4bf-4073-8057-bfdb3cd770ef&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+  &lt;/text&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.identifier">identifier</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.system">system</a>
+            <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://ehealthontario.ca/fhir/NamingSystem/id-example1-uri&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;WSD00038991&quot;/&gt;
+  &lt;/identifier&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.active">active</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.name">name</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.use">use</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;maiden&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.text">text</a>
+          <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Organization Role.  CONCEPT DOMAIN: OrganizationEntityType Description: Further classifies entities of EntityClass ORG.&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Protocol details&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Eligibility Criteria&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.prefix">prefix</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Rate your doctor:&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.suffix">suffix</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Assessment Method&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.period">period</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.end">end</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2022-12-09T15:41:00.000Z&quot;/&gt;
+    &lt;/period&gt;
+  &lt;/name&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.telecom">telecom</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;email&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;anitajansen@gmail.com&quot;/&gt;
+  &lt;/telecom&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.gender">gender</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;other&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.birthDate">birthDate</a> <a href="http://hl7.org/fhir/R5/datatypes.html#date">value</a>=&quot;1969&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.deceased[x]">deceasedBoolean</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;false&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.address">address</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.line">line</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;100 Main St&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Metropolis&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.state">state</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Il&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;44130&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.country">country</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;USA&quot;/&gt;
+  &lt;/address&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.maritalStatus">maritalStatus</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-MaritalStatus&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;T&quot;/&gt;
+    &lt;/coding&gt;
+  &lt;/maritalStatus&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.multipleBirth[x]">multipleBirthInteger</a> <a href="http://hl7.org/fhir/R5/datatypes.html#integer">value</a>=&quot;1&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.photo">photo</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Attachment#Attachment.contentType">contentType</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;text/plain; charset=UTF-8, image/png&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Attachment#Attachment.language">language</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;en-AU&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Attachment#Attachment.url">url</a> <a href="http://hl7.org/fhir/R5/datatypes.html#url">value</a>=&quot;http://www.acme.com/logo-small.png&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Attachment#Attachment.size">size</a> <a href="http://hl7.org/fhir/R5/datatypes.html#integer64">value</a>=&quot;1448181448&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Attachment#Attachment.title">title</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Official Corporate Logo&quot;/&gt;
+  &lt;/photo&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact">contact</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact.relationship">relationship</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;FTWINSIS&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/relationship&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact.role">role</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>
+                <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://terminology.hl7.org/CodeSystem/v3-ParticipationType&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;WIT&quot;/&gt;
+      &lt;/coding&gt;
+    &lt;/role&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact.name">name</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.use">use</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;maiden&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.text">text</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Informatiker&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Referral requirements&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;&amp;gt;0.4 Positive; 0.3 to 0.4 Suspect &amp;lt; 0.3 Negative&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.prefix">prefix</a>
+              <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;A copyright statement relating to the Group and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the Group. The short copyright declaration (e.g. (c) '2015+ xyz organization' should be sent in the copyrightLabel element.&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.suffix">suffix</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;A description of when an event can occur&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.period">period</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.start">start</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2025-03-03T09:36:36-05:00&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.end">end</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2025-03-03T09:36:36-05:00&quot;/&gt;
+      &lt;/period&gt;
+    &lt;/name&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact.additionalName">additionalName</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.use">use</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;temp&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.text">text</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;StructureDefinition.mapping.name&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;5&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.given">given</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Additional identifier for the questionnaire&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.prefix">prefix</a>
+              <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;The situation that is being documented as an indicaton for this item&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.suffix">suffix</a>
+              <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;During the past year, how often have you failed to do what was normally expected of you because of drinking?&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#HumanName#HumanName.period">period</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.end">end</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2015-03-21&quot;/&gt;
+      &lt;/period&gt;
+    &lt;/additionalName&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact.telecom">telecom</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.system">system</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;phone&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#ContactPoint#ContactPoint.value">value</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;905-333-4444&quot;/&gt;
+    &lt;/telecom&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact.address">address</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.use">use</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;home&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Stitswerd&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;9999 XA&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.country">country</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;NLD&quot;/&gt;
+    &lt;/address&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact.additionalAddress">additionalAddress</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.use">use</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;work&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.line">line</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;123 Smart St&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.city">city</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;PleasantVille&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.state">state</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Vic&quot;/&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Address#Address.postalCode">postalCode</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;3999&quot;/&gt;
+    &lt;/additionalAddress&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact.gender">gender</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;male&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact.organization">organization</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/6.0.0-ballot3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Organization/be21d7fb-1932-4fd4-b628-cb091e21c93d&quot;/&gt;
+    &lt;/organization&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.contact.period">period</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Period#Period.start">start</a> <a href="http://hl7.org/fhir/R5/datatypes.html#dateTime">value</a>=&quot;2012&quot;/&gt;
+    &lt;/period&gt;
+  &lt;/contact&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.communication">communication</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.communication.language">language</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.system">system</a>
+                <a href="http://hl7.org/fhir/R5/datatypes.html#uri">value</a>=&quot;http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;OTHINSTRES&quot;/&gt;
+      &lt;/coding&gt;
+      &lt;<a href="http://hl7.org/fhir/R5/datatypes.html#CodeableConcept#CodeableConcept.text">text</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Kemahiran ke tandas (Toileting)&quot;/&gt;
+    &lt;/language&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.communication.preferred">preferred</a> <a href="http://hl7.org/fhir/R5/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+  &lt;/communication&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.generalPractitioner">generalPractitioner</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/6.0.0-ballot3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Practitioner/4f5ab111-34f6-4a5e-b019-19102e90c33e&quot;/&gt;
+  &lt;/generalPractitioner&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.managingOrganization">managingOrganization</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/6.0.0-ballot3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Organization/c552db1a-d56d-4de3-b8c7-b2f2269fd56f&quot;/&gt;
+  &lt;/managingOrganization&gt;
+  &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.link">link</a>&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.link.other">other</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/6.0.0-ballot3/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R5/datatypes.html#string">value</a>=&quot;Patient/e4aaac3e-d4bf-4073-8057-bfdb3cd770ef&quot;/&gt;
+    &lt;/other&gt;
+    &lt;<a href="http://hl7.org/fhir/R5/patient.html#Patient.link.type">type</a> <a href="http://hl7.org/fhir/R5/datatypes.html#code">value</a>=&quot;refer&quot;/&gt;
+  &lt;/link&gt;
+&lt;/Patient&gt;</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/cgp">HL7 International / Cross-Group Projects</a>.  Package hl7.fhir.us.healthedata1-r6-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 6.0.0-ballot3</a>. Generated <span title="Mon, Jun 2, 2025 05:59+0000">2025-06-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" target="_blank" href="http://www.fhir.org/guides/healthedata1-r6-sandbox/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R5/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" target="_blank" href="http://hl7.org/fhir-issues">Propose a change</a>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

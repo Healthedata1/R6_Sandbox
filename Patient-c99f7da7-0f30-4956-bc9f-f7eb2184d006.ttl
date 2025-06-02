@@ -1,0 +1,163 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-r6-sandbox/Patient/c99f7da7-0f30-4956-bc9f-f7eb2184d006> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "c99f7da7-0f30-4956-bc9f-f7eb2184d006"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient c99f7da7-0f30-4956-bc9f-f7eb2184d006</b></p><a name=\"c99f7da7-0f30-4956-bc9f-f7eb2184d006\"> </a><a name=\"hcc99f7da7-0f30-4956-bc9f-f7eb2184d006\"> </a><a name=\"c99f7da7-0f30-4956-bc9f-f7eb2184d006-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-patient.html\">US Core Patient Profileversion: null0.1.0)</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Transfer From Acute Care Facility to LTCF in Past Four Weeks(old) Other, DoB: 1948-11-23 ( http://hl7.org/fhir/sid/us-ssn#United States Social Security Number#000006521 (use: official, ))</p><hr/><table role=\"presentation\" class=\"none\"><tr><td><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td>true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus T}\">Domestic partner</span></td><td style=\"background-color: #f3f5da\" title=\"Known multipleBirth status of Patient\">Multiple Birth:</td><td colspan=\"3\">false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>ph: 586-555-7887(Mobile)</li><li>桃園市桃園區成功路三段38號</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Language spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes:{http://fhir.hie.moh.gov.my/CodeSystem/questionnaire-my-core 02}\">If Abnormal, Cornea:</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: half-sister\">half-sister:</td><td colspan=\"3\"><ul><li>Comments to go on overload(Temp) (Female)</li><li>ALAM SARI KAJANG 43000 MYS </li><li>ph: 077553/32212</li><li>Organization:<a href=\"Organization/3c5c38bd-4da1-4c23-a64b-29e8fdbfcd73\">Organization/3c5c38bd-4da1-4c23-a64b-29e8fdbfcd73</a></li><li>Valid Period:2020-01-01 --&gt; 2021-12-31</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>General Practitioner: <a href=\"Organization/f8f1d624-4e42-45d6-b73d-1373a053ade9\">Organization/f8f1d624-4e42-45d6-b73d-1373a053ade9</a></li><li>Managing Organization: <a href=\"Organization/82f87f96-3254-44ed-a3ea-f2898667cb03\">Organization/82f87f96-3254-44ed-a3ea-f2898667cb03</a></li><li>Please refer to: <a href=\"Patient/20a9f8cf-f026-4fb4-a878-29ad1fd7938c\">Patient/20a9f8cf-f026-4fb4-a878-29ad1fd7938c</a></li></ul></td></tr></table></td><td><img src=\"7f683193-049f-42b2-ac37-234471c9c5ee.gif\" alt=\"Patient Photo\"/></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "http://hl7.org/fhir/sid/us-ssn"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "000006521" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "old" ] ;
+     fhir:text [ fhir:v "Transfer From Acute Care Facility to LTCF in Past Four Weeks" ] ;
+     fhir:family [ fhir:v "3.16.1" ] ;
+     fhir:given ( [ fhir:v "REC-ID" ] ) ;
+     fhir:prefix ( [ fhir:v "Clinical Data to Date" ] ) ;
+     fhir:suffix ( [ fhir:v "Critical environmental, health or physical risks or hazards. For example 'Do not operate heavy machinery', 'May cause drowsiness'" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2023-08-01"^^xsd:date ] ;
+       fhir:end [ fhir:v "2023-08-15"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "586-555-7887" ] ;
+     fhir:use [ fhir:v "mobile" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "other"] ; # 
+  fhir:birthDate [ fhir:v "1948-11-23"^^xsd:date] ; # 
+  fhir:deceased [
+     a fhir:boolean ;
+     fhir:v true
+  ] ; # 
+  fhir:address ( [
+     fhir:text [ fhir:v "桃園市桃園區成功路三段38號" ] ;
+     fhir:line ( [ fhir:v "成功路" ] ) ;
+     fhir:city [ fhir:v "桃園區" ] ;
+     fhir:district [ fhir:v "桃園市" ] ;
+     fhir:country [ fhir:v "TW" ]
+  ] ) ; # 
+  fhir:maritalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "T" ]
+     ] )
+  ] ; # 
+  fhir:multipleBirth [
+     a fhir:boolean ;
+     fhir:v false
+  ] ; # 
+  fhir:photo ( [
+     fhir:contentType [ fhir:v "image/gif" ] ;
+     fhir:data [ fhir:v "R0lGODlhEwARAPcAAAAAAAAA/+9aAO+1AP/WAP/eAP/eCP/eEP/eGP/nAP/nCP/nEP/nIf/nKf/nUv/nWv/vAP/vCP/vEP/vGP/vIf/vKf/vMf/vOf/vWv/vY//va//vjP/3c//3lP/3nP//tf//vf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAAEALAAAAAATABEAAAi+AAMIDDCgYMGBCBMSvMCQ4QCFCQcwDBGCA4cLDyEGECDxAoAQHjxwyKhQAMeGIUOSJJjRpIAGDS5wCDly4AALFlYOgHlBwwOSNydM0AmzwYGjBi8IHWoTgQYORg8QIGDAwAKhESI8HIDgwQaRDI1WXXAhK9MBBzZ8/XDxQoUFZC9IiCBh6wEHGz6IbNuwQoSpWxEgyLCXL8O/gAnylNlW6AUEBRIL7Og3KwQIiCXb9HsZQoIEUzUjNEiaNMKAAAA7"^^xsd:base64Binary ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "HSIS" ]
+       ] )
+     ] ) ;
+     fhir:role ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "POWATT" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:use [ fhir:v "temp" ] ;
+       fhir:text [ fhir:v "Comments to go on overload" ] ;
+       fhir:family [ fhir:v "RuleFilters" ] ;
+       fhir:given ( [ fhir:v "maria.smith@CCTU.med.edu" ] ) ;
+       fhir:prefix ( [ fhir:v "Body site administered to" ] ) ;
+       fhir:suffix ( [ fhir:v "BARS Message Definition ServiceRequest - Request - Cancelled" ] ) ;
+       fhir:period [
+         fhir:start [ fhir:v "2022-11-17T00:00:00+01:00"^^xsd:dateTime ] ;
+         fhir:end [ fhir:v "2022-11-24T23:59:59+01:00"^^xsd:dateTime ]
+       ]
+     ] ;
+     fhir:additionalName ( [
+       fhir:use [ fhir:v "old" ] ;
+       fhir:text [ fhir:v "A description of what is most important to you\nEmergency Information : - Include any essential information that any professional in health and social care should know about the you in any situation, including emergencies.\nOther Information : -This could include : - Values, Spirituality/religion, Ethnicity, Culture, Pets, Goals and aspirations, Meaningful activities including leisure activities, visiting places, sport and exercise, listening to music, employment, education, volunteering" ] ;
+       fhir:family [ fhir:v "A reference to the actual resource from which data was derived." ] ;
+       fhir:given ( [ fhir:v "A short descriptive label the version to be used in tables or diagrams." ] ) ;
+       fhir:prefix ( [ fhir:v "Janin" ] ) ;
+       fhir:suffix ( [ fhir:v "Structure Definition used by this map" ] ) ;
+       fhir:period [
+         fhir:start [ fhir:v "2027-01-05T09:36:36-05:00"^^xsd:dateTime ] ;
+         fhir:end [ fhir:v "2027-01-11T09:36:36-05:00"^^xsd:dateTime ]
+       ]
+     ] ) ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "077553/32212" ]
+     ] ) ;
+     fhir:address [
+       fhir:line ( [ fhir:v "ALAM SARI" ] ) ;
+       fhir:city [ fhir:v "KAJANG" ] ;
+       fhir:postalCode [ fhir:v "43000" ] ;
+       fhir:country [ fhir:v "MYS" ]
+     ] ;
+     fhir:additionalAddress ( [
+       fhir:use [ fhir:v "work" ] ;
+       fhir:line ( [ fhir:v "123 Smart St" ] ) ;
+       fhir:city [ fhir:v "PleasantVille" ] ;
+       fhir:state [ fhir:v "Vic" ] ;
+       fhir:postalCode [ fhir:v "3999" ]
+     ] ) ;
+     fhir:gender [ fhir:v "female" ] ;
+     fhir:organization [
+       fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Organization/3c5c38bd-4da1-4c23-a64b-29e8fdbfcd73> ;
+       fhir:reference [ fhir:v "Organization/3c5c38bd-4da1-4c23-a64b-29e8fdbfcd73" ]
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2020-01-01"^^xsd:date ] ;
+       fhir:end [ fhir:v "2021-12-31"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:communication ( [
+     fhir:language [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.hie.moh.gov.my/CodeSystem/questionnaire-my-core"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "02" ]
+       ] ) ;
+       fhir:text [ fhir:v "If Abnormal, Cornea:" ]
+     ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) ; # 
+  fhir:generalPractitioner ( [
+     fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Organization/f8f1d624-4e42-45d6-b73d-1373a053ade9> ;
+     fhir:reference [ fhir:v "Organization/f8f1d624-4e42-45d6-b73d-1373a053ade9" ]
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Organization/82f87f96-3254-44ed-a3ea-f2898667cb03> ;
+     fhir:reference [ fhir:v "Organization/82f87f96-3254-44ed-a3ea-f2898667cb03" ]
+  ] ; # 
+  fhir:link ( [
+     fhir:other [
+       fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Patient/20a9f8cf-f026-4fb4-a878-29ad1fd7938c> ;
+       fhir:reference [ fhir:v "Patient/20a9f8cf-f026-4fb4-a878-29ad1fd7938c" ]
+     ] ;
+     fhir:type [ fhir:v "refer" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

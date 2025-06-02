@@ -1,0 +1,165 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-r6-sandbox/Patient/375a4252-b189-4dbc-bc44-1bc6611a7803> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "375a4252-b189-4dbc-bc44-1bc6611a7803"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient 375a4252-b189-4dbc-bc44-1bc6611a7803</b></p><a name=\"375a4252-b189-4dbc-bc44-1bc6611a7803\"> </a><a name=\"hc375a4252-b189-4dbc-bc44-1bc6611a7803\"> </a><a name=\"375a4252-b189-4dbc-bc44-1bc6611a7803-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-patient.html\">US Core Patient Profileversion: null0.1.0)</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">BARS Message Definition Booking - Request - Cancelled(temp) Female, DoB: 1958-01-01 ( http://eng.it/sid/docIde#EK000001)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>false</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td>2003-06-24 12:35:07-0400</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus A}\">Annulled</span></td><td style=\"background-color: #f3f5da\" title=\"Known multipleBirth status of Patient\">Multiple Birth:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"mailto:abc\">abc</a></li><li>183 MOUNTAIN VIEW ST MOUNDS OK 74048 US </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Language spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes:{http://fhir.kl.dk/ffinst/CodeSystem/KLToolsCodes 7aaccc2e-ead3-41f0-a9ba-091f2e539753}\">Same source and target systems</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: natural sibling\">natural sibling:</td><td colspan=\"3\"><ul><li>[0-9]*(Name changed for Marriage) (Other)</li><li>Promenade des Anglais 111 Lyon 69001 FR </li><li><a href=\"mailto:ioannisioannou@gmail.com\">ioannisioannou@gmail.com</a></li><li>Organization:<a href=\"Organization/0c2e1091-c6b0-42ef-bf69-8141b7627a40\">Organization/0c2e1091-c6b0-42ef-bf69-8141b7627a40</a></li><li>Valid Period:2020-01-01 --&gt; 2021-12-31</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>General Practitioner: <a href=\"Organization/1307e26a-dfdc-4e94-88c4-32e02fe1856f\">Organization/1307e26a-dfdc-4e94-88c4-32e02fe1856f</a></li><li>Managing Organization: <a href=\"Organization/22804768-ec5e-4bf0-9705-0279c5f87983\">Organization/22804768-ec5e-4bf0-9705-0279c5f87983</a></li><li>Also see: <a href=\"RelatedPerson/ee575357-eb94-481d-8ea0-7f754e8ef20e\">RelatedPerson/ee575357-eb94-481d-8ea0-7f754e8ef20e</a></li></ul></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://eng.it/sid/docIde"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "EK000001" ]
+  ] ) ; # 
+  fhir:active [ fhir:v false] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "temp" ] ;
+     fhir:text [ fhir:v "BARS Message Definition Booking - Request - Cancelled" ] ;
+     fhir:family [ fhir:v "Age at Diagnosis" ] ;
+     fhir:given ( [ fhir:v "NamingSystem.contact.name" ] ) ;
+     fhir:prefix ( [ fhir:v "Whether the organization's record is still in active use" ] ) ;
+     fhir:suffix ( [ fhir:v "Business version of the search parameter" ] ) ;
+     fhir:period [
+       fhir:start [ fhir:v "2026-12-28T09:36:36-05:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2026-12-28T09:36:36-05:00"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "abc" ] ;
+     fhir:use [ fhir:v "old" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "female"] ; # 
+  fhir:birthDate [ fhir:v "1958-01-01"^^xsd:date] ; # 
+  fhir:deceased [
+     a fhir:dateTime ;
+     fhir:v "2003-06-24T12:35:07-04:00"^^xsd:dateTime
+  ] ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "183 MOUNTAIN VIEW ST" ] ) ;
+     fhir:city [ fhir:v "MOUNDS" ] ;
+     fhir:state [ fhir:v "OK" ] ;
+     fhir:postalCode [ fhir:v "74048" ] ;
+     fhir:country [ fhir:v "US" ]
+  ] ) ; # 
+  fhir:maritalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "A" ]
+     ] )
+  ] ; # 
+  fhir:multipleBirth [
+     a fhir:boolean ;
+     fhir:v true
+  ] ; # 
+  fhir:photo ( [
+     fhir:contentType [ fhir:v "text/plain; charset=UTF-8, image/png" ] ;
+     fhir:language [ fhir:v "en-AU" ] ;
+     fhir:url [ fhir:v "http://www.acme.com/logo-small.png"^^xsd:anyURI ] ;
+     fhir:size [ fhir:v "1037423195"^^xsd:long ] ;
+     fhir:title [ fhir:v "Official Corporate Logo" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "NSIB" ]
+       ] )
+     ] ) ;
+     fhir:role ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "WIT" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:use [ fhir:v "maiden" ] ;
+       fhir:text [ fhir:v "[0-9]*" ] ;
+       fhir:family [ fhir:v "Lake Death Location - Lat/Long" ] ;
+       fhir:given ( [ fhir:v "Brian" ] ) ;
+       fhir:prefix ( [ fhir:v "Bayi terkejut pada bunyi kuat" ] ) ;
+       fhir:suffix ( [ fhir:v "Physical training group" ] ) ;
+       fhir:period [
+         fhir:start [ fhir:v "2017-06-06"^^xsd:date ]
+       ]
+     ] ;
+     fhir:additionalName ( [
+       fhir:use [ fhir:v "official" ] ;
+       fhir:text [ fhir:v "27a" ] ;
+       fhir:family [ fhir:v "An unwanted side effect or negative outcome of the subject of this resource when being used for this indication" ] ;
+       fhir:given ( [ fhir:v "A description of a landmark on the body used as a reference to locate something else." ] ) ;
+       fhir:prefix ( [ fhir:v "Scen2ObsCalories" ] ) ;
+       fhir:suffix ( [ fhir:v "Does your diabetes limit your activities?" ] ) ;
+       fhir:period [
+         fhir:start [ fhir:v "2022-10-03T16:25:26+02:00"^^xsd:dateTime ] ;
+         fhir:end [ fhir:v "2022-10-04T17:25:26+02:00"^^xsd:dateTime ]
+       ]
+     ] ) ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "ioannisioannou@gmail.com" ] ;
+       fhir:use [ fhir:v "home" ]
+     ] ) ;
+     fhir:address [
+       fhir:line ( [ fhir:v "Promenade des Anglais 111" ] ) ;
+       fhir:city [ fhir:v "Lyon" ] ;
+       fhir:postalCode [ fhir:v "69001" ] ;
+       fhir:country [ fhir:v "FR" ]
+     ] ;
+     fhir:additionalAddress ( [
+       fhir:use [ fhir:v "work" ] ;
+       fhir:line ( [ fhir:v "123 Smart St" ] ) ;
+       fhir:city [ fhir:v "PleasantVille" ] ;
+       fhir:state [ fhir:v "Vic" ] ;
+       fhir:postalCode [ fhir:v "3999" ]
+     ] ) ;
+     fhir:gender [ fhir:v "other" ] ;
+     fhir:organization [
+       fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Organization/0c2e1091-c6b0-42ef-bf69-8141b7627a40> ;
+       fhir:reference [ fhir:v "Organization/0c2e1091-c6b0-42ef-bf69-8141b7627a40" ]
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2020-01-01"^^xsd:date ] ;
+       fhir:end [ fhir:v "2021-12-31"^^xsd:date ]
+     ]
+  ] ) ; # 
+  fhir:communication ( [
+     fhir:language [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://fhir.kl.dk/ffinst/CodeSystem/KLToolsCodes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "7aaccc2e-ead3-41f0-a9ba-091f2e539753" ]
+       ] ) ;
+       fhir:text [ fhir:v "Same source and target systems" ]
+     ] ;
+     fhir:preferred [ fhir:v false ]
+  ] ) ; # 
+  fhir:generalPractitioner ( [
+     fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Organization/1307e26a-dfdc-4e94-88c4-32e02fe1856f> ;
+     fhir:reference [ fhir:v "Organization/1307e26a-dfdc-4e94-88c4-32e02fe1856f" ]
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Organization/22804768-ec5e-4bf0-9705-0279c5f87983> ;
+     fhir:reference [ fhir:v "Organization/22804768-ec5e-4bf0-9705-0279c5f87983" ]
+  ] ; # 
+  fhir:link ( [
+     fhir:other [
+       fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/RelatedPerson/ee575357-eb94-481d-8ea0-7f754e8ef20e> ;
+       fhir:reference [ fhir:v "RelatedPerson/ee575357-eb94-481d-8ea0-7f754e8ef20e" ]
+     ] ;
+     fhir:type [ fhir:v "seealso" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

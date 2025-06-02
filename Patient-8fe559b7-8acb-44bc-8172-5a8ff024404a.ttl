@@ -1,0 +1,161 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-r6-sandbox/Patient/8fe559b7-8acb-44bc-8172-5a8ff024404a> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "8fe559b7-8acb-44bc-8172-5a8ff024404a"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient 8fe559b7-8acb-44bc-8172-5a8ff024404a</b></p><a name=\"8fe559b7-8acb-44bc-8172-5a8ff024404a\"> </a><a name=\"hc8fe559b7-8acb-44bc-8172-5a8ff024404a\"> </a><a name=\"8fe559b7-8acb-44bc-8172-5a8ff024404a-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-patient.html\">US Core Patient Profileversion: null0.1.0)</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Organization Role.  CONCEPT DOMAIN: OrganizationEntityType Description: Further classifies entities of EntityClass ORG.(maiden) Other, DoB: 1969 ( http://ehealthontario.ca/fhir/NamingSystem/id-example1-uri#WSD00038991)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td>true</td><td style=\"background-color: #f3f5da\" title=\"Known status of Patient\">Deceased:</td><td>false</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Known Marital status of Patient\">Marital Status:</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-MaritalStatus T}\">Domestic partner</span></td><td style=\"background-color: #f3f5da\" title=\"Known multipleBirth status of Patient\">Multiple Birth:</td><td colspan=\"3\">1</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"mailto:anitajansen@gmail.com\">anitajansen@gmail.com</a></li><li>100 Main St Metropolis Il 44130 USA </li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Language spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes:{http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes OTHINSTRES}\">Kemahiran ke tandas (Toileting)</span> (preferred)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: fraternal twin sister\">fraternal twin sister:</td><td colspan=\"3\"><ul><li>Informatiker(Name changed for Marriage) (Male)</li><li>Stitswerd 9999 XA NLD (home)</li><li>ph: 905-333-4444</li><li>Organization:<a href=\"Organization/be21d7fb-1932-4fd4-b628-cb091e21c93d\">Organization/be21d7fb-1932-4fd4-b628-cb091e21c93d</a></li><li>Valid Period:2012 --&gt; (ongoing)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient Links\">Links:</td><td colspan=\"3\"><ul><li>General Practitioner: <a href=\"Practitioner/4f5ab111-34f6-4a5e-b019-19102e90c33e\">Practitioner/4f5ab111-34f6-4a5e-b019-19102e90c33e</a></li><li>Managing Organization: <a href=\"Organization/c552db1a-d56d-4de3-b8c7-b2f2269fd56f\">Organization/c552db1a-d56d-4de3-b8c7-b2f2269fd56f</a></li><li>Please refer to: <a href=\"Patient/e4aaac3e-d4bf-4073-8057-bfdb3cd770ef\">Patient/e4aaac3e-d4bf-4073-8057-bfdb3cd770ef</a></li></ul></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://ehealthontario.ca/fhir/NamingSystem/id-example1-uri"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "WSD00038991" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "maiden" ] ;
+     fhir:text [ fhir:v "Organization Role.  CONCEPT DOMAIN: OrganizationEntityType Description: Further classifies entities of EntityClass ORG." ] ;
+     fhir:family [ fhir:v "Protocol details" ] ;
+     fhir:given ( [ fhir:v "Eligibility Criteria" ] ) ;
+     fhir:prefix ( [ fhir:v "Rate your doctor:" ] ) ;
+     fhir:suffix ( [ fhir:v "Assessment Method" ] ) ;
+     fhir:period [
+       fhir:end [ fhir:v "2022-12-09T15:41:00.000Z"^^xsd:dateTime ]
+     ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "anitajansen@gmail.com" ]
+  ] ) ; # 
+  fhir:gender [ fhir:v "other"] ; # 
+  fhir:birthDate [ fhir:v "1969"^^xsd:gYear] ; # 
+  fhir:deceased [
+     a fhir:boolean ;
+     fhir:v false
+  ] ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "100 Main St" ] ) ;
+     fhir:city [ fhir:v "Metropolis" ] ;
+     fhir:state [ fhir:v "Il" ] ;
+     fhir:postalCode [ fhir:v "44130" ] ;
+     fhir:country [ fhir:v "USA" ]
+  ] ) ; # 
+  fhir:maritalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "T" ]
+     ] )
+  ] ; # 
+  fhir:multipleBirth [
+     a fhir:integer ;
+     fhir:v 1
+  ] ; # 
+  fhir:photo ( [
+     fhir:contentType [ fhir:v "text/plain; charset=UTF-8, image/png" ] ;
+     fhir:language [ fhir:v "en-AU" ] ;
+     fhir:url [ fhir:v "http://www.acme.com/logo-small.png"^^xsd:anyURI ] ;
+     fhir:size [ fhir:v "1448181448"^^xsd:long ] ;
+     fhir:title [ fhir:v "Official Corporate Logo" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:relationship ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "FTWINSIS" ]
+       ] )
+     ] ) ;
+     fhir:role ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "WIT" ]
+       ] )
+     ] ) ;
+     fhir:name [
+       fhir:use [ fhir:v "maiden" ] ;
+       fhir:text [ fhir:v "Informatiker" ] ;
+       fhir:family [ fhir:v "Referral requirements" ] ;
+       fhir:given ( [ fhir:v ">0.4 Positive; 0.3 to 0.4 Suspect < 0.3 Negative" ] ) ;
+       fhir:prefix ( [ fhir:v "A copyright statement relating to the Group and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the Group. The short copyright declaration (e.g. (c) '2015+ xyz organization' should be sent in the copyrightLabel element." ] ) ;
+       fhir:suffix ( [ fhir:v "A description of when an event can occur" ] ) ;
+       fhir:period [
+         fhir:start [ fhir:v "2025-03-03T09:36:36-05:00"^^xsd:dateTime ] ;
+         fhir:end [ fhir:v "2025-03-03T09:36:36-05:00"^^xsd:dateTime ]
+       ]
+     ] ;
+     fhir:additionalName ( [
+       fhir:use [ fhir:v "temp" ] ;
+       fhir:text [ fhir:v "StructureDefinition.mapping.name" ] ;
+       fhir:family [ fhir:v "5" ] ;
+       fhir:given ( [ fhir:v "Additional identifier for the questionnaire" ] ) ;
+       fhir:prefix ( [ fhir:v "The situation that is being documented as an indicaton for this item" ] ) ;
+       fhir:suffix ( [ fhir:v "During the past year, how often have you failed to do what was normally expected of you because of drinking?" ] ) ;
+       fhir:period [
+         fhir:end [ fhir:v "2015-03-21"^^xsd:date ]
+       ]
+     ] ) ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "905-333-4444" ]
+     ] ) ;
+     fhir:address [
+       fhir:use [ fhir:v "home" ] ;
+       fhir:city [ fhir:v "Stitswerd" ] ;
+       fhir:postalCode [ fhir:v "9999 XA" ] ;
+       fhir:country [ fhir:v "NLD" ]
+     ] ;
+     fhir:additionalAddress ( [
+       fhir:use [ fhir:v "work" ] ;
+       fhir:line ( [ fhir:v "123 Smart St" ] ) ;
+       fhir:city [ fhir:v "PleasantVille" ] ;
+       fhir:state [ fhir:v "Vic" ] ;
+       fhir:postalCode [ fhir:v "3999" ]
+     ] ) ;
+     fhir:gender [ fhir:v "male" ] ;
+     fhir:organization [
+       fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Organization/be21d7fb-1932-4fd4-b628-cb091e21c93d> ;
+       fhir:reference [ fhir:v "Organization/be21d7fb-1932-4fd4-b628-cb091e21c93d" ]
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2012"^^xsd:gYear ]
+     ]
+  ] ) ; # 
+  fhir:communication ( [
+     fhir:language [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.org/fhir/us/sirb/CodeSystem/temporarycodes"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "OTHINSTRES" ]
+       ] ) ;
+       fhir:text [ fhir:v "Kemahiran ke tandas (Toileting)" ]
+     ] ;
+     fhir:preferred [ fhir:v true ]
+  ] ) ; # 
+  fhir:generalPractitioner ( [
+     fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Practitioner/4f5ab111-34f6-4a5e-b019-19102e90c33e> ;
+     fhir:reference [ fhir:v "Practitioner/4f5ab111-34f6-4a5e-b019-19102e90c33e" ]
+  ] ) ; # 
+  fhir:managingOrganization [
+     fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Organization/c552db1a-d56d-4de3-b8c7-b2f2269fd56f> ;
+     fhir:reference [ fhir:v "Organization/c552db1a-d56d-4de3-b8c7-b2f2269fd56f" ]
+  ] ; # 
+  fhir:link ( [
+     fhir:other [
+       fhir:link <http://www.fhir.org/guides/healthedata1-r6-sandbox/Patient/e4aaac3e-d4bf-4073-8057-bfdb3cd770ef> ;
+       fhir:reference [ fhir:v "Patient/e4aaac3e-d4bf-4073-8057-bfdb3cd770ef" ]
+     ] ;
+     fhir:type [ fhir:v "refer" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
