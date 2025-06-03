@@ -179,3 +179,11 @@ Create a JSON template for the FHIR 6.0.0-ballot3 [ResourceName] resource based 
   ```
 
 If you meant to reference `Condition.evidence.form` as a specific element or extension, or if you prefer the paired `evidence` mapping, please clarify. Additionally, if you need templates for other resources with their R4-R6 change summaries or further refinements, let me know!
+
+
+add a summary of the Resources changes to the Prompt
+
+Condition.evidence	Type changed from BackboneElement to CodeableReference
+Condition.evidence.code	Deleted  and mapped to Condition.evidence.concept
+Condition.evidence.detail Deleted and mapped to Condition.evidence.reference
+Condition.bodyStructure	 new Added Element no 4.0.1 equivalent
