@@ -1,133 +1,167 @@
-To address your request, I’ll update the JSON template for the FHIR 6.0.0-ballot3 AllergyIntolerance resource to handle the `AllergyIntolerance.reaction.manifestation` element, which changed from a repeating `CodeableConcept` (0..*) in FHIR 4.0.1 to a repeating `CodeableReference` (0..*) in FHIR 6.0.0-ballot3. The `CodeableReference.concept` subelement will be mapped to each repeat of the equivalent `CodeableConcept` in FHIR 4.0.1 using the special iteration syntax:
+Thank you for clarifying that the `Condition.evidence.detail` element in FHIR 4.0.1, which is a repeating element (0..*), should be mapped to `Condition.evidence.reference` in FHIR 6.0.0-ballot3 using the same iteration pattern as `Condition.evidence.code` to `Condition.evidence.concept`. Specifically, you’ve provided the construct:
 
 ```json
-{
-  "{% for item in repeating R4_element %}": {
-    "R6_element": "{{ %item }}"
-  }
+"{% for item in repeating element %}": {
+  "key": "{{ %item }}"
 }
 ```
 
-For `AllergyIntolerance.reaction.manifestation`, this will be:
+And you’ve indicated that `Condition.evidence.detail` should follow this pattern, with an example for `reference`:
 
 ```json
-"manifestation": [
-  {
-    "{% for manifestation in AllergyIntolerance.reaction.manifestation %}": {
-      "concept": "{{ %manifestation }}"
-    }
-  }
-]
+"{% for reference in Condition.evidence.detail %}": {
+  "reference": "{{ %reference }}"
+}
 ```
 
-The `CodeableReference.reference` subelement will be omitted since it has no FHIR 4.0.1 equivalent and is optional. The template will build on the previous AllergyIntolerance template (artifact ID: `e7132036-05ad-4aae-bcc3-75fe7d66a0d6`), retaining the `BackboneElement` expansion for `reaction`, extensions for `meta` and the resource level, and the use of `{{ }}` for non-arrays and `{[ ]}` for arrays (except where the new iteration syntax applies). I’ll also update the generalized prompt template to include this new rule for handling repeating `CodeableReference` elements.
+This suggests that the `Condition.evidence` element, which changed from a `BackboneElement` (0..*) with `code` (0..*) and `detail` (0..*) subcomponents in FHIR 4.0.1 to a `CodeableReference` (0..*) in FHIR 6.0.0-ballot3, should have separate iterations for `evidence.code` to `evidence.concept` and `evidence.detail` to `evidence.reference`, rather than combining them in a single iteration with index-based pairing as done previously. Additionally, you mentioned `Condition.evidence.form`, but since `form` is not a standard element in the FHIR 4.0.1 or 6.0.0-ballot3 Condition resource, I’ll assume this was a typo or misunderstanding, possibly referring to the general pattern of mapping. If `form` refers to a custom extension or another element, please clarify.
 
-### Step 1: Update the AllergyIntolerance Template
-The `AllergyIntolerance.reaction.manifestation` element is a repeating (0..*) `CodeableReference` in FHIR 6.0.0-ballot3, mapping to a repeating (0..*) `CodeableConcept` in FHIR 4.0.1. The updated template will:
-- Use the iteration syntax for `reaction.manifestation` to map each 4.0.1 `CodeableConcept` to `CodeableReference.concept`.
-- Omit `manifestation.reference` as it has no 4.0.1 equivalent.
-- Retain the `reaction` `BackboneElement` expansion and other elements from the previous template.
-- Keep the `artifact_id` (`e7132036-05ad-4aae-bcc3-75fe7d66a0d6`) for the update.
+### Interpretation of the Request
+- **Objective**: Update the JSON template for the FHIR 6.0.0-ballot3 Condition resource to map the repeating `Condition.evidence` element such that:
+  - `Condition.evidence.code` (0..*) from 4.0.1 maps to `Condition.evidence.concept` using `{% for item in Condition.evidence.code %}: { "concept": "{{ %item }}" }`.
+  - `Condition.evidence.detail` (0..*) from 4.0.1 maps to `Condition.evidence.reference` using `{% for reference in Condition.evidence.detail %}: { "reference": "{{ %reference }}" }`.
+- **Implication**: Instead of pairing `code` and `detail` in a single iteration (as in the previous template), the template will produce separate `CodeableReference` entries for each `evidence.code` and each `evidence.detail`, resulting in multiple `evidence` entries in the 6.0.0-ballot3 output.
+- **Other Changes**: Retain the mapping for the new element `Condition.bodyStructure` as `{[ null //no direct equivalent in 4.0.1 ]}` and all other elements from the previous Condition template.
+- **Prompt Update**: Update the generalized prompt template to clarify that when a `BackboneElement` changes to a `CodeableReference`, each repeating subcomponent (e.g., `code`, `detail`) can be mapped to separate `CodeableReference` entries using individual iteration constructs.
+
+### Step 1: Review Mapping for Condition.evidence
+- **FHIR 4.0.1**:
+  - `Condition.evidence` (0..*): `BackboneElement` with:
+    - `code` (0..*): `CodeableConcept` (e.g., symptoms or findings).
+    - `detail` (0..*): `Reference` (e.g., to `Observation` or other resources).
+- **FHIR 6.0.0-ballot3**:
+  - `Condition.evidence` (0..*): `CodeableReference` with:
+    - `concept` (0..1): `CodeableConcept` (maps to `evidence.code`).
+    - `reference` (0..1): `Reference(Observation)` (maps to `evidence.detail`).
+- **Mapping**:
+  - For each `evidence.code` in 4.0.1, create a `CodeableReference` with `concept` populated and `reference` as null.
+  - For each `evidence.detail` in 4.0.1, create a `CodeableReference` with `reference` populated and `concept` as null.
+  - This results in separate `evidence` entries for each `code` and `detail`, potentially increasing the number of `evidence` entries in the 6.0.0-ballot3 output compared to the 4.0.1 input.
+- **BodyStructure**: New element, mapped as `{[ null //no direct equivalent in 4.0.1 ]}`.
+- **Note**: This approach may produce more `evidence` entries than in the 4.0.1 structure (e.g., one entry with both `code` and `detail` becomes two entries). If pairing is intended, please confirm.
+
+### Step 2: Update the Condition JSON Template
+The updated template will:
+- Map `Condition.evidence` as a `CodeableReference` (0..*) with:
+  - Separate iterations for `evidence.code` to `evidence.concept` using `{% for item in Condition.evidence.code %}: { "concept": "{{ %item }}" }`.
+  - Separate iterations for `evidence.detail` to `evidence.reference` using `{% for reference in Condition.evidence.detail %}: { "reference": "{{ %reference }}" }`.
+- Retain `Condition.bodyStructure` as `{[ null //no direct equivalent in 4.0.1 ]}`.
+- Expand the `stage` `BackboneElement`.
+- Keep `extension` arrays and other elements unchanged.
+- Use the same `artifact_id` (`3b16e638-bdfa-4238-84ab-5f234928dc5e`) since this is an update to the Condition template.
 
 ```json
 {
-  "resourceType": "AllergyIntolerance",
-  "id": "{{ AllergyIntolerance.id }}",
-  "extension": "{[ AllergyIntolerance.extension ]}",
+  "resourceType": "Condition",
+  "id": "{{ Condition.id }}",
+  "extension": "{[ Condition.extension ]}",
   "meta": {
-    "versionId": "{{ AllergyIntolerance.meta.versionId }}",
-    "lastUpdated": "{{ AllergyIntolerance.meta.lastUpdated }}",
-    "source": "{{ AllergyIntolerance.meta.source }}",
-    "profile": "{[ AllergyIntolerance.meta.profile ]}",
-    "security": "{[ AllergyIntolerance.meta.security ]}",
-    "tag": "{[ AllergyIntolerance.meta.tag ]}",
-    "extension": "{[ AllergyIntolerance.meta.extension ]}"
+    "versionId": "{{ Condition.meta.versionId }}",
+    "lastUpdated": "{{ Condition.meta.lastUpdated }}",
+    "source": "{{ Condition.meta.source }}",
+    "profile": "{[ Condition.meta.profile ]}",
+    "security": "{[ Condition.meta.security ]}",
+    "tag": "{[ Condition.meta.tag ]}",
+    "extension": "{[ Condition.meta.extension ]}"
   },
-  "identifier": "{[ AllergyIntolerance.identifier ]}",
-  "clinicalStatus": "{{ AllergyIntolerance.clinicalStatus }}",
-  "verificationStatus": "{{ AllergyIntolerance.verificationStatus }}",
-  "type": "{{ AllergyIntolerance.type }}",
-  "category": "{[ AllergyIntolerance.category ]}",
-  "criticality": "{{ AllergyIntolerance.criticality }}",
-  "code": "{{ AllergyIntolerance.code }}",
-  "patient": "{{ AllergyIntolerance.patient }}",
-  "encounter": "{{ AllergyIntolerance.encounter }}",
-  "onsetDateTime": "{{ AllergyIntolerance.onsetDateTime }}",
-  "onsetAge": "{{ AllergyIntolerance.onsetAge }}",
-  "onsetPeriod": "{{ AllergyIntolerance.onsetPeriod }}",
-  "onsetRange": "{{ AllergyIntolerance.onsetRange }}",
-  "onsetString": "{{ AllergyIntolerance.onsetString }}",
-  "recordedDate": "{{ AllergyIntolerance.recordedDate }}",
-  "recorder": "{{ AllergyIntolerance.recorder }}",
-  "asserter": "{{ AllergyIntolerance.asserter }}",
-  "lastOccurrence": "{{ AllergyIntolerance.lastOccurrence }}",
-  "note": "{[ AllergyIntolerance.note ]}",
-  "reaction": [
+  "identifier": "{[ Condition.identifier ]}",
+  "clinicalStatus": "{{ Condition.clinicalStatus }}",
+  "verificationStatus": "{{ Condition.verificationStatus }}",
+  "category": "{[ Condition.category ]}",
+  "severity": "{{ Condition.severity }}",
+  "code": "{{ Condition.code }}",
+  "bodySite": "{[ Condition.bodySite ]}",
+  "bodyStructure": "{[ null //no direct equivalent in 4.0.1 ]}",
+  "subject": "{{ Condition.subject }}",
+  "encounter": "{{ Condition.encounter }}",
+  "onsetDateTime": "{{ Condition.onsetDateTime }}",
+  "onsetAge": "{{ Condition.onsetAge }}",
+  "onsetPeriod": "{{ Condition.onsetPeriod }}",
+  "onsetRange": "{{ Condition.onsetRange }}",
+  "onsetString": "{{ Condition.onsetString }}",
+  "abatementDateTime": "{{ Condition.abatementDateTime }}",
+  "abatementAge": "{{ Condition.abatementAge }}",
+  "abatementPeriod": "{{ Condition.abatementPeriod }}",
+  "abatementRange": "{{ Condition.abatementRange }}",
+  "abatementString": "{{ Condition.abatementString }}",
+  "recordedDate": "{{ Condition.recordedDate }}",
+  "recorder": "{{ Condition.recorder }}",
+  "asserter": "{{ Condition.asserter }}",
+  "stage": [
     {
-      "substance": "{{ AllergyIntolerance.reaction.substance }}",
-      "manifestation": [
-        {
-          "{% for manifestation in AllergyIntolerance.reaction.manifestation %}": {
-            "concept": "{{ %manifestation }}"
-          }
-        }
-      ],
-      "description": "{{ AllergyIntolerance.reaction.description }}",
-      "onset": "{{ AllergyIntolerance.reaction.onset }}",
-      "severity": "{{ AllergyIntolerance.reaction.severity }}",
-      "exposureRoute": "{{ AllergyIntolerance.reaction.exposureRoute }}",
-      "note": "{[ AllergyIntolerance.reaction.note ]}"
+      "summary": "{{ Condition.stage.summary }}",
+      "assessment": "{[ Condition.stage.assessment ]}",
+      "type": "{{ Condition.stage.type }}"
     }
-  ]
+  ],
+  "evidence": [
+    {
+      "{% for item in Condition.evidence.code %}": {
+        "concept": "{{ %item }}"
+      }
+    },
+    {
+      "{% for reference in Condition.evidence.detail %}": {
+        "reference": "{{ %reference }}"
+      }
+    }
+  ],
+  "note": "{[ Condition.note ]}"
 }
 ```
 
 ### Notes on the Template Update
-- **Manifestation Iteration**:
-  - The `reaction.manifestation` element uses the iteration syntax: `"{% for manifestation in AllergyIntolerance.reaction.manifestation %}": { "concept": "{{ %manifestation }}" }`.
-  - This maps each `CodeableConcept` from `AllergyIntolerance.reaction.manifestation` in FHIR 4.0.1 to a `CodeableReference.concept` in FHIR 6.0.0-ballot3.
-  - The `reference` subelement is omitted, as it has no 4.0.1 equivalent and is optional.
-- **Reaction BackboneElement**: Retained the expansion of `reaction` to include all subcomponents (`substance`, `manifestation`, `description`, `onset`, `severity`, `exposureRoute`, `note`).
-- **Other Elements**: Unchanged, with `{[ ]}` for arrays (`extension`, `meta.extension`, `identifier`, `category`, `note`, `reaction`, `reaction.note`, `meta.profile`, `meta.security`, `meta.tag`) and `{{ }}` for non-arrays (e.g., `id`, `clinicalStatus`).
-- **Artifact ID**: Kept as `e7132036-05ad-4aae-bcc3-75fe7d66a0d6` for the update.
-- **Title Update**: Changed to "FHIR AllergyIntolerance Resource Template (6.0.0-ballot3) with Iterated CodeableReference" to reflect the new iteration syntax.
-- **FHIR 4.0.1 Compatibility**: The iteration syntax ensures each `CodeableConcept` in the 4.0.1 `reaction.manifestation` array is mapped to a `CodeableReference.concept` in 6.0.0-ballot3.
+- **Evidence Mapping**:
+  - Two separate iterations:
+    - `{% for item in Condition.evidence.code %}: { "concept": "{{ %item }}" }` creates a `CodeableReference` for each `evidence.code` with only `concept` populated.
+    - `{% for reference in Condition.evidence.detail %}: { "reference": "{{ %reference }}" }` creates a `CodeableReference` for each `evidence.detail` with only `reference` populated.
+  - This produces distinct `evidence` entries for each `code` and `detail`, unlike the previous index-based pairing.
+- **BodyStructure**: Unchanged, using `{[ null //no direct equivalent in 4.0.1 ]}`.
+- **Other Elements**: Unchanged, including `stage` expansion and extensions.
+- **Artifact ID**: Retained as `3b16e638-bdfa-4238-84ab-5f234928dc5e` for the update.
+- **Title Update**: Changed to "FHIR Condition Resource Template (6.0.0-ballot3) with Separate Evidence Iterations" to reflect the new mapping approach.
+- **FHIR 4.0.1 Compatibility**: Expressions `Condition.evidence.code` and `Condition.evidence.detail` are valid for 4.0.1.
+- **Consideration**: This mapping may result in more `evidence` entries in 6.0.0-ballot3 than in 4.0.1 (e.g., one `evidence` with `code` and `detail` becomes two entries). If pairing is preferred, the previous index-based approach could be reinstated.
 
-### Step 2: Update the Generalized Prompt Template
-The generalized prompt is updated to include the new rule for handling repeating `CodeableReference` elements with the iteration syntax, while preserving existing rules for `BackboneElement` expansion, extensions, and other requirements.
+### Step 3: Update the Generalized Prompt Template
+The prompt is updated to clarify that when a `BackboneElement` changes to a `CodeableReference`, repeating subcomponents (e.g., `code`, `detail`) can be mapped to separate `CodeableReference` entries using individual iteration constructs, in addition to the option for paired mappings.
 
 ---
 
 **Updated Generalized Prompt Template**:
 
-Create a JSON template for the FHIR 6.0.0-ballot3 [ResourceName] resource based on https://hl7.org/fhir/6.0.0-ballot3/[resourcename].html. For the values, insert FHIRPath expressions that correspond to the equivalent elements in the FHIR 4.0.1 [ResourceName] resource at https://hl7.org/fhir/4.0.1/[resourcename].html. Use FHIRPath expressions at the resource element datatype level (e.g., `[ResourceName].identifier` instead of `[ResourceName].identifier.use`), except for the `meta` element, which should use granular FHIRPath expressions (e.g., `[ResourceName].meta.versionId`). Include an `extension` array at the resource level (mapped to `{[ [ResourceName].extension ]}`) and within the `meta` element (mapped to `{[ [ResourceName].meta.extension ]}`) to support custom extensions, noting if no equivalent exists in 4.0.1. For elements of type `BackboneElement` (e.g., `[ResourceName].reaction`), expand the element to include all its subcomponents (e.g., `substance`, `manifestation`, `description`) with appropriate FHIRPath expressions. For elements that changed from `CodeableConcept` in FHIR 4.0.1 to `CodeableReference` in FHIR 6.0.0-ballot3, map the `CodeableReference.concept` subelement to the equivalent `CodeableConcept` in 4.0.1 (e.g., `[ResourceName].reaction.manifestation.concept` maps to `[ResourceName].reaction.manifestation`). For repeating `CodeableReference` elements (0..*), use the iteration syntax `{% for item in [ResourceName].repeatingElement %}: { "concept": "{{ %item }}" }` to map each repeat of the 4.0.1 `CodeableConcept` to `CodeableReference.concept`, and omit the `CodeableReference.reference` subelement if it has no 4.0.1 equivalent and is optional. Embed FHIRPath expressions in Liquid-like tags, using `{{ expression }}` for non-array elements and `{[ expression ]}` for array elements (e.g., `{[ [ResourceName].identifier ]}` for arrays like `identifier`), except where the iteration syntax is used for repeating `CodeableReference` elements. Wrap the JSON template in an `<xaiArtifact>` tag with a unique `artifact_id`, a descriptive `title`, and `contentType="application/json"`. If an element is new in 6.0.0-ballot3 or has no direct equivalent in 4.0.1, note this in the template or omit if optional.
+Create a JSON template for the FHIR 6.0.0-ballot3 [ResourceName] resource based on https://hl7.org/fhir/6.0.0-ballot3/[resourcename].html, with FHIRPath expressions corresponding to equivalent elements in the FHIR 4.0.1 [ResourceName] resource at https://hl7.org/fhir/4.0.1/[resourcename].html. Additionally, provide a summary of changes between FHIR 4.0.1 and FHIR 6.0.0-ballot3 for the [ResourceName] resource, covering type changes (e.g., `BackboneElement` to `CodeableReference`), deleted elements, renamed elements, and new elements. For the JSON template, use FHIRPath expressions at the resource element datatype level (e.g., `[ResourceName].identifier` instead of `[ResourceName].identifier.use`), except for the `meta` element, which should use granular FHIRPath expressions (e.g., `[ResourceName].meta.versionId`). Include an `extension` array at the resource level (mapped to `{[ [ResourceName].extension ]}`) and within the `meta` element (mapped to `{[ [ResourceName].meta.extension ]}`) to support custom extensions. For elements of type `BackboneElement` in 4.0.1 (e.g., `[ResourceName].evidence`), expand their subcomponents (e.g., `code`, `detail`) if they remain a `BackboneElement` in 6.0.0-ballot3; if changed to `CodeableReference`, map each repeating subcomponent to separate `CodeableReference` entries using individual iteration syntax (e.g., `{% for item in [ResourceName].element.code %}: { "concept": "{{ %item }}" }` for `CodeableConcept` subcomponents and `{% for item in [ResourceName].element.detail %}: { "reference": "{{ %item }}" }` for `Reference` subcomponents) or combine them in a single iteration (e.g., `{% for item in [ResourceName].element.subcomponent %}: { "concept": "{{ %item }}", "reference": "{{ [ResourceName].element.otherSubcomponent[indexOf(%item)] }}" }`) for paired subcomponents. For elements that changed from `CodeableConcept` in 4.0.1 to `CodeableReference` in 6.0.0-ballot3, map the `CodeableReference.concept` subelement to the equivalent `CodeableConcept` in 4.0.1 (e.g., `[ResourceName].reaction.manifestation.concept` maps to `[ResourceName].reaction.manifestation`). For repeating `CodeableReference` elements (0..*), use the iteration syntax `{% for item in [ResourceName].repeatingElement %}: { "concept": "{{ %item }}" }` to map each repeat of the 4.0.1 `CodeableConcept` to `CodeableReference.concept`, and include `reference` if mapped. For elements renamed between FHIR 4.0.1 and 6.0.0-ballot3 (e.g., `lastOccurrence` to `lastReactionOccurrence`), use the 6.0.0-ballot3 element name in the template and map it to the 4.0.1 name using the appropriate FHIRPath expression (e.g., `lastReactionOccurrence` maps to `[ResourceName].lastOccurrence`). For elements that are new in 6.0.0-ballot3 or have no direct equivalent in 4.0.1 (excluding `extension` and `meta.extension` unless explicitly specified), include them in the template with the notation `{{ null //no direct equivalent in 4.0.1 }}` for non-array elements or `{[ null //no direct equivalent in 4.0.1 ]}` for array elements. Embed FHIRPath expressions in Liquid-like tags, using `{{ expression }}` for non-array elements and `{[ expression ]}` for array elements (e.g., `{[ [ResourceName].identifier ]}` for arrays like `identifier`), except where the iteration syntax is used for repeating `CodeableReference` elements. Wrap the JSON template in an `<xaiArtifact>` tag with a unique `artifact_id`, a descriptive `title`, and `contentType="application/json"`.
 
 ---
 
 ### Key Changes in the Prompt
-- **CodeableReference Iteration Rule**:
-  - Added instruction to use the iteration syntax `{% for item in [ResourceName].repeatingElement %}: { "concept": "{{ %item }}" }` for repeating `CodeableReference` elements (0..*), mapping each 4.0.1 `CodeableConcept` to `CodeableReference.concept`.
-  - Specified omitting `CodeableReference.reference` if it has no 4.0.1 equivalent and is optional.
-- **Preserved Rules**:
-  - Retained `BackboneElement` expansion (e.g., `reaction` subcomponents).
-  - Kept extension inclusion at the resource level and in `meta`.
-  - Maintained FHIRPath at the datatype level for non-`meta` elements, with `{{ }}` for non-arrays and `{[ ]}` for arrays.
-  - Preserved `meta` granular expressions and `<xaiArtifact>` requirements.
+- **BackboneElement to CodeableReference**:
+  - Added explicit support for mapping repeating `BackboneElement` subcomponents to separate `CodeableReference` entries using individual iteration constructs (e.g., one for `code` to `concept`, another for `detail` to `reference`), alongside the existing paired iteration option.
+- **Summary Requirement**: Retained from the previous update, ensuring a summary of R4-R6 changes.
+- **Preserved Rules**: All other rules remain unchanged.
+
+### Summary of R4 to R6 Changes for Condition Resource (Repeated for Reference)
+- **Type Changes**:
+  - `Condition.evidence`: Changed from `BackboneElement` (0..*) in FHIR 4.0.1 to `CodeableReference` (0..*) in FHIR 6.0.0-ballot3 with target type `Observation`.
+- **Deleted Elements**:
+  - `Condition.evidence.code`: Deleted, mapped to `Condition.evidence.concept`.
+  - `Condition.evidence.detail`: Deleted, mapped to `Condition.evidence.reference`.
+- **Renamed Elements**: None identified.
+- **New Elements**:
+  - `Condition.bodyStructure`: Added in 6.0.0-ballot3, no equivalent in 4.0.1, likely `Reference(BodyStructure)` (0..*).
 
 ### Usage Instructions
-- **Processing the Template**: Use a templating engine supporting `{{ }}`, `{[ ]}`, and the iteration syntax `{% for item in ... %}`. Evaluate FHIRPath expressions against a FHIR 4.0.1 AllergyIntolerance resource. The `{% for manifestation in AllergyIntolerance.reaction.manifestation %}` loop iterates over each 4.0.1 `CodeableConcept`, populating `CodeableReference.concept`.
-- **FHIRPath Evaluation**: Use a FHIRPath library (e.g., `fhirpath`) to handle expressions, ensuring proper iteration for `AllergyIntolerance.reaction.manifestation`.
-- **Validation**: Validate the rendered JSON against the FHIR 6.0.0-ballot3 AllergyIntolerance schema, checking that `reaction.manifestation` contains `concept` entries for each 4.0.1 `CodeableConcept`.
-- **Example Rendering**: For a 4.0.1 resource with:
+- **Processing**: Use a templating engine supporting `{{ }}`, `{[ ]}`, and `{% for item in ... %}`. Evaluate FHIRPath expressions against a FHIR 4.0.1 Condition resource. The `evidence` field generates separate `CodeableReference` entries for each `evidence.code` and `evidence.detail`.
+- **FHIRPath Evaluation**: Use a FHIRPath library (e.g., `fhirpath`) to handle expressions, ensuring separate iterations for `Condition.evidence.code` and `Condition.evidence.detail`.
+- **Validation**: Validate the rendered JSON against the FHIR 6.0.0-ballot3 Condition schema, checking `evidence.concept` and `evidence.reference`.
+- **Example Rendering**: For a 4.0.1 Condition with:
   ```json
   {
-    "resourceType": "AllergyIntolerance",
-    "reaction": [
+    "resourceType": "Condition",
+    "evidence": [
       {
-        "manifestation": [
-          { "coding": [{ "system": "http://snomed.info/sct", "code": "422587007", "display": "Rash" }] },
-          { "coding": [{ "system": "http://snomed.info/sct", "code": "271807003", "display": "Hives" }] }
-        ]
+        "code": [{ "text": "Symptom" }],
+        "detail": [{ "reference": "Observation/123" }]
       }
     ]
   }
@@ -135,24 +169,13 @@ Create a JSON template for the FHIR 6.0.0-ballot3 [ResourceName] resource based 
   The rendered 6.0.0-ballot3 JSON would include:
   ```json
   {
-    "resourceType": "AllergyIntolerance",
-    "reaction": [
-      {
-        "manifestation": [
-          { "concept": { "coding": [{ "system": "http://snomed.info/sct", "code": "422587007", "display": "Rash" }] } },
-          { "concept": { "coding": [{ "system": "http://snomed.info/sct", "code": "271807003", "display": "Hives" }] } }
-        ]
-      }
-    ]
+    "resourceType": "Condition",
+    "evidence": [
+      { "concept": { "text": "Symptom" } },
+      { "reference": { "reference": "Observation/123" } }
+    ],
+    "bodyStructure": []
   }
   ```
 
-### Applying to Other Resources
-To use the updated prompt for another resource (e.g., Observation):
-1. Replace `[ResourceName]` with `Observation` and update URLs (https://hl7.org/fhir/6.0.0-ballot3/observation.html, https://hl7.org/fhir/4.0.1/observation.html).
-2. Expand `BackboneElement` types (e.g., `Observation.component`).
-3. Identify repeating `CodeableReference` elements (e.g., `Observation.category`) and use the iteration syntax for `concept` mappings.
-4. Include `extension` arrays at the resource level and in `meta`.
-5. Use a new `artifact_id` for a new resource template.
-
-If you need a template for another resource, specific extension URLs, or assistance with the iteration syntax implementation, please let me know!
+If you meant to reference `Condition.evidence.form` as a specific element or extension, or if you prefer the paired `evidence` mapping, please clarify. Additionally, if you need templates for other resources with their R4-R6 change summaries or further refinements, let me know!

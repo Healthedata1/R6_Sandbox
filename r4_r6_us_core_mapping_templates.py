@@ -3,12 +3,145 @@
 # 
 # r4-r6-us-core-mapping-templates.ipynb
 # 
-# A set of US Core Profile Mapping template for converting from FHIR R4 to FHIR R6.  These template are used by the [FHIRPathMappingLanguage](https://github.com/beda-software/FHIRPathMappingLanguage)
+# A set of US Core Profile Mapping template - python dictionaries - for converting from FHIR R4 to FHIR R6.  These template are used by the [FHIRPathMappingLanguage](https://github.com/beda-software/FHIRPathMappingLanguage)
 # a data DSL designed to convert data from any source to any FHIR Resource.  The templates consist of Python dictionaries that leverage liquid template and FHIRPath syntax to generate the mappings. 
+# 
+# Outline of How the templates are made and used
+# 
+# 1. These templates are created using Grok LLM.  See the [fhirmapping instructions prompts](https://github.com/Healthedata1/R6_Sandbox/blob/main/fhirmapping_instructuions_prompts.json). 
+# 2. Examples are generated using the [r4_r6_fhirmapper.ipynb
+# ](https://github.com/Healthedata1/R6_Sandbox/blob/main/r4_r6_fhirmapper.ipynb) Jupyter file.  This script maps the US Core version 8 examples which are based on FHIR R4 to R6 and loads them into the US Core R6 prototype IG build.
+# 3. The examples are validated in the US Core R6 prototype IG build and, if needed, updates to the fhirmapping instructions prompts are made to edit the templates.
+#    
 
 # %%
 import json
-templates = {'AllergyIntolerance':
+templates = { 'Condition':
+{
+  "resourceType": "Condition",
+  "id": "{{ Condition.id }}",
+  "extension": "{[ Condition.extension ]}",
+  "meta": {
+    "versionId": "{{ Condition.meta.versionId }}",
+    "lastUpdated": "{{ Condition.meta.lastUpdated }}",
+    "source": "{{ Condition.meta.source }}",
+    "profile": "{[ Condition.meta.profile ]}",
+    "security": "{[ Condition.meta.security ]}",
+    "tag": "{[ Condition.meta.tag ]}",
+    "extension": "{[ Condition.meta.extension ]}"
+  },
+  "identifier": "{[ Condition.identifier ]}",
+ "{% if Condition.clinicalStatus.exists() %}": {"clinicalStatus":
+        "{{Condition.clinicalStatus}}"},
+  "{% else %}": { 
+        "clinicalStatus":{ "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "unknown",
+                "display": "Unknown"
+            }
+        ],
+        "text": "Unknown" 
+  }
+},
+  "verificationStatus": "{{ Condition.verificationStatus }}",
+  "category": "{[ Condition.category ]}",
+  "severity": "{{ Condition.severity }}",
+  "code": "{{ Condition.code }}",
+  "bodySite": "{[ Condition.bodySite ]}",
+  "bodyStructure": "{[ null //no direct equivalent in 4.0.1 ]}",
+  "subject": "{{ Condition.subject }}",
+  "encounter": "{{ Condition.encounter }}",
+  "onsetDateTime": "{{ Condition.onsetDateTime }}",
+  "onsetAge": "{{ Condition.onsetAge }}",
+  "onsetPeriod": "{{ Condition.onsetPeriod }}",
+  "onsetRange": "{{ Condition.onsetRange }}",
+  "onsetString": "{{ Condition.onsetString }}",
+  "abatementDateTime": "{{ Condition.abatementDateTime }}",
+  "abatementAge": "{{ Condition.abatementAge }}",
+  "abatementPeriod": "{{ Condition.abatementPeriod }}",
+  "abatementRange": "{{ Condition.abatementRange }}",
+  "abatementString": "{{ Condition.abatementString }}",
+  "recordedDate": "{{ Condition.recordedDate }}",
+  "recorder": "{{ Condition.recorder }}",
+  "asserter": "{{ Condition.asserter }}",
+  "stage": [
+    {
+      "summary": "{{ Condition.stage.summary }}",
+      "assessment": "{[ Condition.stage.assessment ]}",
+      "type": "{{ Condition.stage.type }}"
+    }
+  ],
+  "evidence": [
+    {
+      "{% for item in Condition.evidence.code %}": {
+        "concept": "{{ %item }}"
+      }
+    },
+    {
+      "{% for reference in Condition.evidence.detail %}": {
+        "reference": "{{ %reference }}"
+      }
+    }
+  ],
+  "note": "{[ Condition.note ]}"
+},
+'Patient': 
+{
+  "resourceType": "Patient",
+  "id": "{{ Patient.id }}",
+  "extension": "{[ Patient.extension ]}",
+  "meta": {
+    "versionId": "{{ Patient.meta.versionId }}",
+    "lastUpdated": "{{ Patient.meta.lastUpdated }}",
+    "source": "{{ Patient.meta.source }}",
+    "profile": "{[ Patient.meta.profile ]}",
+    "security": "{[ Patient.meta.security ]}",
+    "tag": "{[ Patient.meta.tag ]}",
+    "extension": "{[ Patient.meta.extension ]}"
+  },
+  "identifier": "{[ Patient.identifier ]}",
+  "active": "{{ Patient.active }}",
+  "name": "{[ Patient.name ]}",
+  "telecom": "{[ Patient.telecom ]}",
+  "birthDate": "{{ Patient.birthDate }}",
+  "deceasedBoolean": "{{ Patient.deceasedBoolean }}",
+  "deceasedDateTime": "{{ Patient.deceasedDateTime }}",
+  "address": "{[ Patient.address ]}",
+  "maritalStatus": "{{ Patient.maritalStatus }}",
+  "multipleBirthBoolean": "{{ Patient.multipleBirthBoolean }}",
+  "multipleBirthInteger": "{{ Patient.multipleBirthInteger }}",
+  "photo": "{[ Patient.photo ]}",
+  "contact": [
+    {
+      "role": "{[ null //no direct equivalent in 4.0.1 ]}",
+      "relationship": "{[ Patient.contact.relationship ]}",
+      "name": "{{ Patient.contact.name }}",
+      "additionalName": "{[ null //no direct equivalent in 4.0.1 ]}",
+      "telecom": "{[ Patient.contact.telecom ]}",
+      "address": "{{ Patient.contact.address }}",
+      "additionalAddress": "{[ null //no direct equivalent in 4.0.1 ]}",
+      "gender": "{{ Patient.contact.gender }}",
+      "organization": "{{ Patient.contact.organization }}",
+      "period": "{{ Patient.contact.period }}"
+    }
+  ],
+  "communication": [
+    {
+      "language": "{{ Patient.communication.language }}",
+      "preferred": "{{ Patient.communication.preferred }}"
+    }
+  ],
+  "generalPractitioner": "{[ Patient.generalPractitioner ]}",
+  "managingOrganization": "{{ Patient.managingOrganization }}",
+  "link": [
+    {
+      "other": "{{ Patient.link.other }}",
+      "type": "{{ Patient.link.type }}"
+    }
+  ]
+},
+'AllergyIntolerance':
 {
   "resourceType": "AllergyIntolerance",
   "id": "{{ AllergyIntolerance.id }}",
@@ -39,7 +172,7 @@ templates = {'AllergyIntolerance':
   "recordedDate": "{{ AllergyIntolerance.recordedDate }}",
   "recorder": "{{ AllergyIntolerance.recorder }}",
   "asserter": "{{ AllergyIntolerance.asserter }}",
-  "lastOccurrence": "{{ AllergyIntolerance.lastOccurrence }}",
+  "lastReactionOccurrence": "{{ AllergyIntolerance.lastOccurrence }}",
   "note": "{[ AllergyIntolerance.note ]}",
   "reaction": [
     {
@@ -59,7 +192,6 @@ templates = {'AllergyIntolerance':
     }
   ]
 }
-,
 }
 
 
