@@ -16,7 +16,115 @@
 
 # %%
 import json
-templates = { 'Condition':
+templates = {'Observation':
+{
+  "resourceType": "Observation",
+  "id": "{{ Observation.id }}",
+  "meta": {
+    "versionId": "{{ Observation.meta.versionId }}",
+    "lastUpdated": "{{ Observation.meta.lastUpdated }}",
+    "source": "{{ Observation.meta.source }}",
+    "profile": "{[ Observation.meta.profile ]}",
+    "security": "{[ Observation.meta.security ]}",
+    "tag": "{[ Observation.meta.tag ]}",
+    "extension": "{[ Observation.meta.extension ]}"
+  },
+  "implicitRules": "{{ Observation.implicitRules }}",
+  "language": "{{ Observation.language }}",
+  "text": "{{ Observation.text }}",
+  "contained": "{[ Observation.contained ]}",
+  "extension": "{[ Observation.extension ]}",
+  "modifierExtension": "{[ Observation.modifierExtension ]}",
+  "identifier": "{[ Observation.identifier ]}",
+  "instantiatesCanonical": "{{ null //no direct equivalent in 4.0.1 }}",
+  "instantiatesReference": "{{ null //no direct equivalent in 4.0.1 }}",
+  "basedOn": "{[ Observation.basedOn ]}",
+  "triggeredBy": [{
+    "observation": "{{ null //no direct equivalent in 4.0.1 }}",
+    "type": "{{ null //no direct equivalent in 4.0.1 }}",
+    "reason": "{{ null //no direct equivalent in 4.0.1 }}"
+  }],
+  "partOf": "{[ Observation.partOf ]}",
+  "status": "{{ Observation.status }}",
+  "category": "{[ Observation.category ]}",
+  "code": "{{ Observation.code }}",
+  "subject": "{{ Observation.subject }}",
+  "focus": "{[ Observation.focus ]}",
+  "encounter": "{{ Observation.encounter }}",
+  "effectiveDateTime": "{{ Observation.effectiveDateTime }}",
+  "effectivePeriod": "{{ Observation.effectivePeriod }}",
+  "effectiveTiming": "{{ Observation.effectiveTiming }}",
+  "effectiveInstant": "{{ Observation.effectiveInstant }}",
+  "issued": "{{ Observation.issued }}",
+  "performer": "{[ Observation.performer ]}",
+  "valueQuantity": "{{ Observation.valueQuantity }}",
+  "valueCodeableConcept": "{{ Observation.valueCodeableConcept }}",
+  "valueString": "{{ Observation.valueString }}",
+  "valueBoolean": "{{ Observation.valueBoolean }}",
+  "valueInteger": "{{ Observation.valueInteger }}",
+  "valueRange": "{{ Observation.valueRange }}",
+  "valueRatio": "{{ Observation.valueRatio }}",
+  "valueSampledData": "{{ Observation.valueSampledData }}",
+  "valueTime": "{{ Observation.valueTime }}",
+  "valueDateTime": "{{ Observation.valueDateTime }}",
+  "valuePeriod": "{{ Observation.valuePeriod }}",
+  "valueAttachment": "{{ null //no direct equivalent in 4.0.1 }}",
+  "valueReference": "{{ null //no direct equivalent in 4.0.1 }}",
+  "dataAbsentReason": "{{ Observation.dataAbsentReason }}",
+  "interpretation": "{[ Observation.interpretation ]}",
+  "note": "{[ Observation.note ]}",
+  "bodySite": "{{ Observation.bodySite }}",
+  "bodyStructure": "{{ null //no direct equivalent in 4.0.1 }}",
+  "method": "{{ Observation.method }}",
+  "specimen": "{{ Observation.specimen }}",
+  "device": "{{ Observation.device }}",
+  "referenceRange": {
+    "{% for item in Observation.referenceRange %}": {
+      "low": "{{ %item.low }}",
+      "high": "{{ %item.high }}",
+      "normalValue": "{{ null //no direct equivalent in 4.0.1 }}",
+      "type": "{{ %item.type }}",
+      "appliesTo": "{[ %item.appliesTo ]}",
+      "age": "{{ %item.age }}",
+      "text": "{{ %item.text }}"
+    }
+  },
+  "hasMember": "{[ Observation.hasMember ]}",
+  "derivedFrom": "{[ Observation.derivedFrom ]}",
+  "organizer": "{{ null //no direct equivalent in 4.0.1 }}",
+  "component": {
+    "{% for item in Observation.component %}": {
+      "code": "{{ %item.code }}",
+      "valueQuantity": "{{ %item.valueQuantity }}",
+      "valueCodeableConcept": "{{ %item.valueCodeableConcept }}",
+      "valueString": "{{ %item.valueString }}",
+      "valueBoolean": "{{ %item.valueBoolean }}",
+      "valueInteger": "{{ %item.valueInteger }}",
+      "valueRange": "{{ %item.valueRange }}",
+      "valueRatio": "{{ %item.valueRatio }}",
+      "valueSampledData": "{{ %item.valueSampledData }}",
+      "valueTime": "{{ %item.valueTime }}",
+      "valueDateTime": "{{ %item.valueDateTime }}",
+      "valuePeriod": "{{ %item.valuePeriod }}",
+      "valueAttachment": "{{ null //no direct equivalent in 4.0.1 }}",
+      "valueReference": "{{ null //no direct equivalent in 4.0.1 }}",
+      "dataAbsentReason": "{{ %item.dataAbsentReason }}",
+      "interpretation": "{[ %item.interpretation ]}",
+      "referenceRange": {
+        "{% for subitem in %item.referenceRange %}": {
+          "low": "{{ %subitem.low }}",
+          "high": "{{ %subitem.high }}",
+          "normalValue": "{{ null //no direct equivalent in 4.0.1 }}",
+          "type": "{{ %subitem.type }}",
+          "appliesTo": "{[ %subitem.appliesTo ]}",
+          "age": "{{ %subitem.age }}",
+          "text": "{{ %subitem.text }}"
+        }
+      }
+    }
+  }
+},
+'Condition':
 {
   "resourceType": "Condition",
   "id": "{{ Condition.id }}",
@@ -193,6 +301,7 @@ templates = { 'Condition':
   ]
 }
 }
+
 
 
 # %%
