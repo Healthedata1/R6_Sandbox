@@ -187,3 +187,15 @@ Condition.evidence	Type changed from BackboneElement to CodeableReference
 Condition.evidence.code	Deleted  and mapped to Condition.evidence.concept
 Condition.evidence.detail Deleted and mapped to Condition.evidence.reference
 Condition.bodyStructure	 new Added Element no 4.0.1 equivalent
+
+Create a fhirpath liquid template for FHIR R6 DocumentReference.
+
+R6 DocumentReference.context Replaces R4  DocumentReference.context.encounter
+R6 DocumentReference.period Replaces R4  DocumentReference.context.period
+R6 DocumentReference.content.profile is new
+R6 DocumentReference.content.profile.valueCoding  Replaces R4  DocumentReference.content.format
+R6 DocumentReference.attester is new
+R6 DocumentReference.attester.time replaces US Core US Authentication Time Extension (http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time)
+R6 DocumentReference.attester.party replaces DocumentReference.authenticator
+
+needed to remove the extension when map to inline element.

@@ -16,7 +16,72 @@
 
 # %%
 import json
-templates = {'Observation':
+templates = {'DocumentReference':
+    {
+  "resourceType": "DocumentReference",
+  "id": "{{ DocumentReference.id }}",
+  "meta": {
+    "versionId": "{{ DocumentReference.meta.versionId }}",
+    "lastUpdated": "{{ DocumentReference.meta.lastUpdated }}",
+    "source": "{{ DocumentReference.meta.source }}",
+    "profile": "{[ DocumentReference.meta.profile ]}",
+    "security": "{[ DocumentReference.meta.security ]}",
+    "tag": "{[ DocumentReference.meta.tag ]}",
+    "extension": "{[ DocumentReference.meta.extension ]}"
+  },
+  "implicitRules": "{{ DocumentReference.implicitRules }}",
+  "language": "{{ DocumentReference.language }}",
+  "text": "{{ DocumentReference.text }}",
+  "contained": "{[ DocumentReference.contained ]}",
+  "extension": "{[ DocumentReference.extension.where(url!='http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time') ]}",
+  "modifierExtension": "{[ DocumentReference.modifierExtension ]}",
+  "masterIdentifier": "{{ DocumentReference.masterIdentifier }}",
+  "identifier": "{[ DocumentReference.identifier ]}",
+  "version": "{{ DocumentReference.version }}",
+  "basedOn": "{[ DocumentReference.basedOn ]}",
+  "status": "{{ DocumentReference.status }}",
+  "docStatus": "{{ DocumentReference.docStatus }}",
+  "modality": "{[ DocumentReference.modality ]}",
+  "type": "{{ DocumentReference.type }}",
+  "category": "{[ DocumentReference.category ]}",
+  "subject": "{{ DocumentReference.subject }}",
+  "context": "{[ DocumentReference.context.encounter ]}",
+  "event": "{[ DocumentReference.context.event ]}",
+  "bodySite": "{[ DocumentReference.context.bodySite ]}",
+  "facilityType": "{{ DocumentReference.context.facilityType }}",
+  "practiceSetting": "{{ DocumentReference.context.practiceSetting }}",
+  "period": "{{ DocumentReference.context.period }}",
+  "date": "{{ DocumentReference.date }}",
+  "author": "{[ DocumentReference.author ]}",
+  "{% if DocumentReference.authenticator.exists() %}": {  "attester": [{
+      "mode": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/composition-attestation-mode",
+            "code": "official"
+          }
+        ]
+      },
+      "time": "{{ DocumentReference.extension.where(url='http://hl7.org/fhir/us/core/StructureDefinition/us-core-authentication-time').valueDateTime }}",
+      "party": "{{ DocumentReference.authenticator }}"
+  }]
+  },
+  "custodian": "{{ DocumentReference.custodian }}",
+  "relatesTo": "{[ DocumentReference.relatesTo ]}",
+  "description": "{{ DocumentReference.description }}",
+  "securityLabel": "{[ DocumentReference.securityLabel ]}",
+  "content": {
+    "{% for item in DocumentReference.content %}": {
+      "attachment": "{{ %item.attachment }}",
+      "profile": {
+        "valueCoding": "{{ %item.format }}",
+        "valueCanonical": "{{ null //no direct equivalent in 4.0.1 }}",
+        "valueUri": "{{ null //no direct equivalent in 4.0.1 }}"
+      }
+    }
+  }
+},
+    'Observation':
 {
   "resourceType": "Observation",
   "id": "{{ Observation.id }}",
